@@ -1,0 +1,737 @@
+{
+  "@@locale": "uz",
+  "appTitle": "Kuryer Auksion",
+  "@appTitle": {
+    "description": "Ilova nomi"
+  },
+  "splashTagline": "Tez. Zamonaviy. Qulay yetkazib berish.",
+  "getStarted": "Boshlash",
+  "language": "Til",
+  "languageUzbek": "Oʻzbekcha",
+  "languageRussian": "Ruscha",
+  "languageEnglish": "Inglizcha",
+  "back": "Orqaga",
+  "continueWord": "Davom etish",
+  "save": "Saqlash",
+  "retry": "Qayta urinish",
+  "loading": "Yuklanmoqda…",
+  "errorGeneric": "Nomaʼlum xatolik",
+  "phoneLoginTitle": "Telefon raqamingiz",
+  "phoneHint": "+998 __ ___ __ __",
+  "sendCode": "Kod yuborish",
+  "errorInvalidPhone": "Toʻgʻri telefon raqamini kiriting",
+  "smsTitle": "SMS tasdiqlash",
+  "smsSubtitle": "Raqamingizga yuborilgan kodni kiriting",
+  "verify": "Tasdiqlash",
+  "resendCode": "Kodni qayta yuborish",
+  "errorInvalidCode": "Kod notoʻgʻri yoki muddati oʻtgan",
+  "offerTitle": "Ommaviy oferta",
+  "offerWelcome": "Xush kelibsiz",
+  "offerBody": "Ushbu oferta shartnomada xizmat koʻrsatish, toʻlovlar, javobgarlik va maʼlumotlarni qayta ishlash qoidalari bayon etilgan. Ofertaga rozilik bildirmasangiz, roʻyxatdan oʻtishni davom ettira olmaysiz.",
+  "offerAcceptCheckbox": "Oferta shartlariga roziman",
+  "acceptAndContinue": "Qabul qilish va davom etish",
+  "errorMustAcceptOffer": "Davom etish uchun ofertaga rozilik bildiring",
+  "chooseRoleTitle": "Rolingizni tanlang",
+  "roleSender": "Yuboruvchi",
+  "roleSenderDesc": "Buyurtma yaratish va kuryer tanlash",
+  "roleCourier": "Kuryer",
+  "roleCourierDesc": "Auksionda ishtirok etish",
+  "roleAdmin": "Administrator",
+  "roleAdminDesc": "Platformani boshqarish",
+  "confirmRole": "Tanlash",
+  "senderHomeTitle": "Bosh sahifa",
+  "courierHomeTitle": "Kuryer paneli",
+  "adminHomeTitle": "Admin paneli",
+  "whereToHint": "Qayerga yetkazish kerak?",
+  "createJob": "Buyurtma yaratish",
+  "nearbyCouriers": "Yaqin atrofdagi kuryerlar",
+  "activeJobs": "Faol buyurtmalar",
+  "demoJobCardTitle": "Namuna buyurtma",
+  "contactsHiddenUntilAuction": "Auksion tugaguncha aloqa maʼlumotlari yashirin",
+  "contactsVisibleAfterWinner": "Gʻolib tanlangach telefon va chat ochiladi",
+  "auctionStatusLive": "Auksion jonli",
+  "auctionStatusEnded": "Auksion yakunlandi",
+  "winnerSelected": "Gʻolib tanlandi",
+  "topBid": "Eng yuqori taklif",
+  "timeLeft": "Qolgan vaqt",
+  "secondsShort": "{count} s",
+  "@secondsShort": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "placeBid": "Taklif berish",
+  "jobDescriptionLabel": "Izoh",
+  "jobTitleLabel": "Buyurtma nomi",
+  "translateDemoHint": "Matn kiriting — 3 tilda saqlanadi (demo tarjima)",
+  "previewForLocale": "Tanlangan tilda koʻrinishi",
+  "storedUz": "Asl (oʻzbekcha)",
+  "storedRu": "Saqlangan ruscha",
+  "storedEn": "Saqlangan inglizcha",
+  "logout": "Chiqish",
+  "settings": "Sozlamalar",
+  "userDemoName": "Foydalanuvchi",
+  "selectWinner": "Gʻolibni tanlash",
+  "signInRequired": "Avtorizatsiyadan oʻting",
+  "noOpenAuctions": "Hozircha ochiq auksion yoʻq",
+  "courierOrdersTabAuction": "Ro'yxat",
+  "courierOrdersSubtabList": "Buyurtmalar",
+  "courierOrdersTabInProgress": "Jarayonda",
+  "courierOrdersTabCompleted": "Bajarilgan",
+  "courierOrdersEmptyInProgress": "Hozircha jarayondagi buyurtmalar yoʻq. Auksion tugagach, siz gʻolib boʻlsangiz, ular shu yerda chiqadi.",
+  "courierOrdersEmptyCompleted": "Hozircha bajarilgan buyurtmalar yoʻq.",
+  "adminDashboard": "Admin panel",
+  "adminStatistics": "Statistika",
+  "adminUsers": "Foydalanuvchilar",
+  "adminLiveMap": "Jonli xarita",
+
+  "adminSectionOverview": "Asosiy ko'rsatkichlar",
+  "adminSectionOrders": "Buyurtmalar va auksionlar",
+  "adminSectionUsersSecurity": "Foydalanuvchilar va xavfsizlik",
+  "adminSectionShortcuts": "Tezkor boshqaruv",
+  "adminChartOrderStatus": "Buyurtmalar taqsimoti",
+  "adminNavStatsSubtitle": "Viloyatlar bo'yicha tahlil",
+  "adminNavUsersSubtitle": "Rollar va bloklash",
+  "adminNavMapSubtitle": "Kuryerlar joylashuvi",
+  "adminMapMarkerCount": "{count} ta kuryer nuqtasi",
+  "@adminMapMarkerCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminMapEmptyNoJobsTitle": "Jonli kuzatuv yo‘q",
+  "adminMapEmptyNoJobsBody": "Hozircha faol kuzatuvdagi buyurtmalar yo‘q. Bir ozdan keyin yangilang.",
+  "adminMapEmptyNoGpsTitle": "Joylashuv kelmagan",
+  "adminMapEmptyNoGpsBody": "Buyurtmalar bor, lekin kuryerlar joylashuvi hali yuborilmagan.",
+  "chartLegendCompleted": "Bajarilgan",
+  "chartLegendActive": "Jarayonda",
+  "chartLegendCancelled": "Bekor qilingan",
+
+  "statTotalUsers": "Jami foydalanuvchilar",
+  "statSenders": "Yuboruvchilar soni",
+  "statCouriers": "Kuryerlar soni",
+  "statActiveJobs": "Faol buyurtmalar",
+  "statLiveAuctions": "Faol auksionlar",
+  "statCompleted": "Bajarilgan buyurtmalar",
+  "statUncompletedJobs": "Bajarilmagan buyurtmalar",
+  "statCancelled": "Bekor qilingan",
+  "statBlocked": "Bloklangan foydalanuvchilar",
+  "statComplaints": "Shikoyatlar soni",
+
+  "noJobsFound": "Buyurtmalar topilmadi",
+
+  "regionLabel": "Viloyat",
+  "districtLabel": "Tuman/Shahar",
+
+  "tabList": "Ro‘yxat",
+  "tabMap": "Xarita",
+
+  "courierMapNoOrdersInDistrict": "Bu hududda buyurtmalar topilmadi",
+  "courierMapOpenDetail": "Batafsil",
+  "courierMapCoordsShort": "{lat}, {lng}",
+  "@courierMapCoordsShort": {
+    "placeholders": {
+      "lat": { "type": "String" },
+      "lng": { "type": "String" }
+    }
+  },
+
+  "courierPanelBannerTitle": "KURYER PANELI",
+  "courierGreeting": "Assalomu alaykum, {name}!",
+  "@courierGreeting": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "courierNavHome": "Bosh sahifa",
+  "courierNavOrders": "Buyurtmalar",
+  "courierNavMaps": "Xaritalar",
+  "courierNavAccount": "Mening hisobim",
+  "senderBottomNavSwitchRole": "Rolni almashtirish",
+  "bottomNavWallet": "Hisobim",
+  "courierCardCreated": "Yaratilgan vaqti",
+  "courierStatusWaiting": "Kutish jarayonida",
+  "courierDeliveredBadge": "Yetkazilgan",
+  "courierCardIdLabel": "ID",
+
+  "jobDetails": "Buyurtma tafsilotlari",
+  "jobDetailProductInfoTitle": "Mahsulot ma'lumotlari",
+  "jobDetailNoProductImage": "Mahsulot rasmi yuklanmagan",
+  "jobDetailVolumeShort": "Hajmi",
+  "pickupLocation": "Qayerdan olinadi",
+  "dropoffLocation": "Qayerga yetkaziladi",
+  "mapDualFlowCardTitle": "Manzillarni xaritada belgilang",
+  "mapPickerNextDropoff": "Keyingi: yetkazish manzili",
+  "mapPickerConfirmBoth": "Manzillarni tasdiqlash",
+
+  "recipientNameLabel": "Qabul qiluvchi ismi",
+  "recipientPhoneLabel": "Qabul qiluvchi telefoni",
+  "recipientPhoneHelper": "+998 yozuvi qatʼiy. Keyingi 9 ta raqamni toʻgʻri kiriting — aks holda kuryer qo‘ng‘iroq qila olmasligi mumkin.",
+
+  "joinAuctionCta": "Auksionga qo‘shilish",
+  "acceptLowerPrice": "Narxni qabul qilish",
+
+  "statusAuction": "Auksion",
+  "statusCompleted": "Bajarildi",
+
+  "complaint": "Shikoyat",
+  "praise": "Maqtov",
+
+  "mapSearch": "Qidiruv",
+  "selectedLocation": "Tanlangan joy",
+  "recenterMap": "Markazga qaytarish",
+"blockUser": "Foydalanuvchini bloklash",
+"auctionCurrentOffer": "Joriy taklif",
+"auctionFloor": "Minimal narx",
+"timeLeftShort": "Qolgan vaqt",
+"auctionHistory": "Auksion tarixi",
+  "auctionLiveScreenTitle": "Jonli auksion",
+  "auctionOngoingLabel": "Auksion davom etmoqda",
+  "auctionWaitingStartLabel": "Auksion boshlanishi kutilmoqda",
+  "auctionTimeLeftLine": "{time} qoldi",
+  "@auctionTimeLeftLine": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "auctionCouriersParticipatingCount": "{count} ta kuryer ishtirok etmoqda",
+  "@auctionCouriersParticipatingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "auctionOrderDetailsTitle": "Buyurtma tafsilotlari",
+  "auctionPickupMapLabel": "Olish:",
+  "auctionDropoffMapLabel": "Yetkazish:",
+  "auctionRouteDistance": "{km} km",
+  "@auctionRouteDistance": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "auctionSenderTrustTitle": "Yuboruvchi haqida",
+  "auctionCourierRatingsTitle": "Kuryerlar reytingi",
+  "auctionAgreePriceCta": "Narxga roziman →",
+  "auctionWatchCta": "Kuzatish",
+  "auctionParticipateOutlined": "Ishtirok etish",
+  "auctionYouAreLeading": "Siz yetakchisiz",
+  "auctionReviewsCount": "{count} ta sharh",
+  "@auctionReviewsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "auctionStartPriceLabel": "Boshlang‘ich narx",
+  "auctionHozirgiTaklif": "Hozirgi taklif",
+  "auctionYourPriceLabel": "Siz qabul qilgan narx",
+  "auctionNextOfferLabel": "Keyingi taklif («Narxga roziman»)",
+  "auctionEndedYouWonBody": "Tabriklaymiz! Buyurtma sizga biriktirildi. Buyurtmalar roʻyxatida davom eting.",
+  "auctionEndedOtherWinnerBody": "Auksion boshqa kuryer foydasiga yakunlandi.",
+  "auctionEndedNoWinnerBody": "Vaqt tugadi. Buyurtma qayta ochiq auksion uchun qoldi.",
+  "auctionEndedGenericBody": "Auksion yakunlandi.",
+
+"chooseRoleSubtitle": "Ilovadan qanday foydalanmoqchisiz?",
+
+"stepProduct": "Mahsulot",
+"stepAddresses": "Manzillar",
+"stepRecipient": "Qabul qiluvchi",
+"stepReview": "Tekshirish",
+
+"fragileItem": "Nozik mahsulot",
+"needsColdChain": "Sovuq saqlash",
+
+"completedJobsLabel": "Bajarilgan ishlar",
+
+"markPickedUp": "Qabul qildim",
+"markDelivered": "Yetkazib berdim",
+
+"orderContactSectionTitle": "Bog‘lanish ma’lumotlari",
+"orderWinnerOutcomeTitle": "G‘olib aniqlandi",
+"orderFinalPriceLabel": "Yakuniy narx",
+"orderWinnerSelectedAtLabel": "Tanlangan vaqt",
+"orderAuctionStepsCountLabel": "Auksion qadamlari",
+"orderAddressesHiddenForNonWinner": "Manzillar faqat auksion g‘olibiga ko‘rinadi.",
+"courierRatingStarsLabel": "Reyting: {value}",
+"@courierRatingStarsLabel": {
+  "placeholders": {
+    "value": {
+      "type": "String"
+    }
+  }
+},
+
+"deliveryNoteOptional": "Izoh (ixtiyoriy)",
+"submitFeedback": "Fikr bildirish",
+  "feedbackComplaintTitle": "Shikoyatingizni yozing",
+  "feedbackComplaintHint": "Nima bo‘lganini qisqacha tushuntiring…",
+  "feedbackPraiseTitle": "Minnatdorchilik",
+  "feedbackPraiseStarsHint": "1–5 yulduz bilan baholang",
+  "feedbackPraiseEmojiHint": "Yoki smayl bilan:",
+  "feedbackSend": "Yuborish",
+  "feedbackSentThanks": "Rahmat, fikringiz qabul qilindi",
+  "feedbackAlreadySubmitted": "Bu buyurtma uchun siz allaqachon fikr bildirgansiz (shikoyat yoki maqtov — bir marta).",
+  "rateCourierCta": "Kuryerni baholash",
+  "rateSenderCta": "Yuboruvchini baholash",
+  "orderFeedbackSheetTitleCourier": "Kuryerni baholang",
+  "orderFeedbackSheetTitleSender": "Yuboruvchini baholang",
+  "orderFeedbackStarsLabel": "Baholash (1–5 yulduz, majburiy)",
+  "orderFeedbackTypeNeutral": "Faqat baho",
+  "orderFeedbackTypeComplaint": "Shikoyat",
+  "orderFeedbackTypePraise": "Maqtov",
+  "orderFeedbackCommentOptional": "Izoh (ixtiyoriy)",
+  "orderFeedbackYourSummaryTitle": "Sizning bahoyingiz",
+  "orderFeedbackSummaryRating": "{stars} / 5",
+  "@orderFeedbackSummaryRating": {
+    "placeholders": {
+      "stars": { "type": "int" }
+    }
+  },
+  "orderFeedbackSummaryTypeRating": "Baho",
+  "orderFeedbackSummaryTypeComplaint": "Shikoyat",
+  "orderFeedbackSummaryTypePraise": "Maqtov",
+  "orderFeedbackSummaryCategory": "Kategoriya: {name}",
+  "@orderFeedbackSummaryCategory": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "fbCatComplaintLate": "Kechikdi",
+  "fbCatComplaintRude": "Muomala yomon",
+  "fbCatComplaintCareless": "Buyurtmaga ehtiyotsiz munosabat",
+  "fbCatComplaintAddress": "Manzil muammosi",
+  "fbCatOther": "Boshqa",
+  "fbCatPraiseFast": "Tez yetkazdi",
+  "fbCatPraisePolite": "Xushmuomala",
+  "fbCatPraiseCareful": "Ehtiyotkor",
+  "fbCatPraiseReliable": "Aniq va ishonchli",
+
+"catComplaintLate": "Kechikdi",
+"catComplaintDamaged": "Zarar yetdi",
+"catComplaintCommunication": "Yomon aloqa",
+
+"catPraiseFast": "Tez yetkazdi",
+"catPraisePolite": "Xushmuomala",
+"catPraiseCareful": "Ehtiyotkor",
+
+"feedbackCategory": "Kategoriya",
+
+"validationRequired": "Majburiy maydon",
+  "fieldOptionalHint": "Ixtiyoriy",
+
+"createOrderTitle": "Buyurtma yaratish",
+
+"createJobConfirmTitle": "Buyurtmani tasdiqlash",
+"createJobSenderAddressLabel": "Yuboruvchi manzili",
+"createJobReceiverAddressLabel": "Qabul qiluvchi manzili",
+"createJobDeliveryTimeSection": "Yetkazib berish vaqti",
+"createJobPickupSlotLabel": "Olish",
+"createJobDeliverySlotLabel": "Yetkazish",
+"createJobAboutPackage": "Paket haqida",
+"createJobPackageTypeShort": "Turi",
+"createJobPackageSizeShort": "O‘lchami",
+"createJobPackageWeightShort": "Og‘irligi",
+"createJobPackageDescShort": "Izoh",
+"createJobEstimatedPrice": "Taxminiy narx",
+"createJobFinalPriceDisclaimer": "Yakuniy narx auksion davomida aniqlanadi",
+"createJobAuctionHint": "Buyurtma joylangandan keyin kuryerlar auksionda ishtirok etadi",
+"createJobPlaceOrder": "Buyurtmani joylash",
+
+"productNameLabel": "Mahsulot nomi",
+"productTypeLabel": "Mahsulot turi",
+
+"weightKg": "Og‘irligi (kg)",
+"volumeCategoryLabel": "Hajm kategoriyasi",
+"orderCommentsLabel": "Qo‘shimcha izoh",
+"orderCommentsHint": "Buyurtma haqida qo‘shimcha ma’lumot yozing",
+"orderCommentsCharCounter": "{current}/{max}",
+"@orderCommentsCharCounter": {
+  "placeholders": {
+    "current": {"type": "int"},
+    "max": {"type": "int"}
+  }
+},
+"orderSuitableTransportTitle": "Mos transport",
+"orderRequiredTransportTitle": "Transport turi",
+"validationSelectSuitableTransport": "Kamida bitta transportni tanlang (bir nechtasini tanlash mumkin)",
+"validationSelectOneTransport": "Buyurtma uchun bitta transport turini tanlang",
+"transportLabelPiyoda": "Piyoda",
+"transportLabelVelosiped": "Velosiped / skuter",
+"transportLabelMoto": "Moto",
+"transportLabelAvto": "Avto",
+"transportLabelTruck": "Katta yuk avto",
+"courierTransportEmptyTitle": "Transport turi belgilanmagan",
+"courierTransportEmptySubtitle": "Buyurtmalarni ko‘rish uchun profilda kamida bitta transport turini tanlang.",
+"courierTransportChooseAction": "Transport tanlash",
+"courierProfileTransportLabel": "Transport turlari",
+"courierProfileTransportChange": "O‘zgartirish",
+"courierTransportSheetTitleProfile": "Transport turlarini yangilang",
+"courierTransportSheetTitleSetup": "Transport turini tanlang",
+"courierFilterAllDistricts": "Barcha tumanlar",
+"jobTransportMismatchMessage": "Bu buyurtma sizning transport turlaringizga mos emas.",
+"volumeCatVerySmall": "Juda kichik",
+"volumeCatSmall": "Kichik",
+"volumeCatMedium": "O‘rta",
+"volumeCatLarge": "Katta",
+"volumeCatVeryLarge": "Katta+",
+"dimensionsMmLabel": "Razmeri (mm)",
+"dimensionsMmHint": "1000x500x200",
+"validationDimensionsFormat": "Format: uchta son, masalan 1000x500x200",
+"validationDimensionsRequired": "Tanlangan hajm uchun razmer majburiy",
+
+"startingPrice": "Boshlang‘ich narx",
+
+"paymentType": "To‘lov turi",
+"paymentCash": "Naqd",
+"paymentCard": "Karta",
+"paymentPrepaid": "Oldindan",
+
+"deliveryTimeTitle": "Yetkazish vaqti",
+"deliveryFast": "Tez",
+"deliveryRelaxed": "Bemalol",
+"deliveryCustom": "Vaqtni tanlash",
+
+"deliveryUntilHint": "Masalan: 21:00 gacha",
+
+"mapAddressCity": "Shahar",
+"mapAddressDistrict": "Tuman",
+"mapAddressRegion": "Viloyat",
+
+"mapDistanceLabel": "Masofa",
+"mapDistanceApproximate": "Taxminiy (to‘g‘ri chiziq bo‘yicha)",
+"mapPickupMarkerHint": "Olib ketish nuqtasi",
+
+"jobRouteMapTitle": "Yo‘l xaritasi",
+"jobMapNoCoordinates": "Xarita uchun manzil koordinatalari mavjud emas.",
+"jobMapMarkerA": "A",
+"jobMapMarkerB": "B",
+"jobMapOneCoordinateOnly": "Faqat bitta manzil koordinatasi mavjud — masofa hisoblanmaydi.",
+
+"courierJobMapToPickupTitle": "Olish nuqtasi (A) ga yo‘l",
+"courierJobMapToDropoffTitle": "Yetkazish nuqtasi (B) ga yo‘l",
+"courierJobMapGpsUnavailable": "Joylashuv aniqlanmadi. «Mening joyim» tugmasidan foydalaning.",
+
+"jobDimensionsMm": "Razmeri (mm)",
+
+"productPhoto": "Mahsulot rasmi",
+"validationProductPhotoRequired": "Mahsulot rasmini joylang",
+"takePhoto": "Rasmga olish",
+"chooseFile": "Fayldan tanlash",
+
+"searchJobsHint": "Buyurtmalarni qidirish",
+
+"profileSection": "Profil",
+"senderProfileNameLabel": "Ism",
+"senderProfilePhoneLabel": "Telefon",
+"senderProfileRoleLabel": "Rol",
+"senderProfileLanguageLabel": "Til",
+"senderProfileStatusLabel": "Holat",
+"senderProfileNameEmpty": "Ism kiritilmagan",
+"senderProfilePhoneEmpty": "Telefon raqam mavjud emas",
+"senderProfileStatusActive": "Faol",
+"senderProfileStatusBlocked": "Bloklangan",
+"senderProfilePhoneVerified": "Telefon tasdiqlangan",
+"senderProfilePhoneNotVerified": "Telefon tasdiqlanmagan",
+"senderProfileVerificationLabel": "Telefon holati",
+"senderWalletTitle": "Hamyon",
+"senderWalletSubtitle": "Tez orada mavjud bo‘ladi.",
+"senderProfileEditSection": "Ma’lumotlarni tahrirlash",
+"senderProfileFullNameLabel": "To‘liq ism",
+"senderProfileFullNameHint": "Ism va familiyangizni kiriting",
+"senderProfileSecondaryPhoneLabel": "Qo‘shimcha telefon",
+"senderProfileSecondaryPhoneHint": "+998 __ ___ __ __",
+"senderProfileChangePhoto": "Rasmni o‘zgartirish",
+"senderProfileRemovePhoto": "Rasmni olib tashlash",
+"senderProfileEditTooltip": "Tahrirlash",
+"senderProfileSave": "Saqlash",
+"senderProfileSaving": "Saqlanmoqda…",
+"senderProfileSaveSuccess": "Profil yangilandi",
+"senderProfileInvalidSecondaryPhone": "To‘g‘ri O‘zbekiston raqamini kiriting",
+"senderProfileSecondarySameAsPrimary": "Asosiy raqamdan boshqa raqam kiriting",
+"senderProfilePrimaryPhoneReadOnly": "Asosiy telefon (tizim)",
+"openAdminPanel": "Admin panelga o‘tish",
+
+"statusPosted": "Yaratildi",
+  "senderOrderStatusPosted": "Kutilmoqda",
+  "senderOrderPriceLabel": "Narx",
+  "senderOrderMinStavkaSuffix": "(min. stavka)",
+  "senderOrderContactsHint": "Kuryer tanlangach aloqa ma'lumotlari ko'rinadi",
+"statusAssigned": "Biriktirildi",
+"statusPickedUp": "Olib ketildi",
+"statusDelivered": "Yetkazildi",
+
+"senderNotificationsTooltip": "Bildirishnomalar",
+"senderNotificationsEmpty": "Hozircha yangi bildirishnomalar yo‘q",
+"senderSnackbarAuctionStarted": "Auksion boshlandi — buyurtma «Jarayonda» bo‘limida",
+"senderSnackbarAuctionEndedAssigned": "Auksion tugadi — kuryer biriktirildi",
+"senderSnackbarAuctionEndedReopened": "Auksion tugadi — g‘olib chiqmadi, buyurtma qayta kutilmoqda",
+"senderSnackbarAuctionEndedCancelled": "Auksion tugadi — buyurtma bekor qilindi",
+  "senderNotifCourierNearPickup1Km": "Kuryer olib ketish manziliga yaqinlashmoqda (~1 km)",
+  "senderNotifCourierNearDropoff5Km": "Kuryer yetkazish manziliga yaqinlashmoqda (~5 km)",
+  "senderNotifCourierNearDropoff2Km": "Kuryer yetkazish manziliga yaqinlashmoqda (~2 km)",
+"senderNotifAuctionStartedBody": "«{product}». Shu buyurtmangiz uchun kuryerlar taklif bildirmoqda. Buyurtmangiz «Jarayonda» bo‘limiga o‘tkazildi.",
+"@senderNotifAuctionStartedBody": {
+  "placeholders": {
+    "product": {"type": "String"}
+  }
+},
+"senderNotifAuctionEndedAssignedBody": "«{product}». «{courier}» kuryerning taklifi {amount} yutuq deb belgilandi. To‘liq ma’lumot uchun Buyurtma tafsilotlariga o‘ting.",
+"@senderNotifAuctionEndedAssignedBody": {
+  "placeholders": {
+    "product": {"type": "String"},
+    "courier": {"type": "String"},
+    "amount": {"type": "String"}
+  }
+},
+"senderNotifAuctionReopenedBody": "«{product}». Auksion tugadi — g‘olib chiqmadi, buyurtma qayta kutilmoqda.",
+"@senderNotifAuctionReopenedBody": {
+  "placeholders": {
+    "product": {"type": "String"}
+  }
+},
+"senderNotifAuctionCancelledBody": "«{product}». Auksion tugadi — buyurtma bekor qilindi.",
+"@senderNotifAuctionCancelledBody": {
+  "placeholders": {
+    "product": {"type": "String"}
+  }
+},
+"senderNotifOpenJobDetails": "Buyurtma tafsilotlari",
+"senderNotifUnknownCourier": "Kuryer",
+"liveTrackingBadge": "Jonli kuzatuv",
+"courierTrackingSendingLabel": "Jonli lokatsiya yuborilmoqda",
+"courierTrackingLocationPermissionDenied": "Joylashuv ruxsati yo‘q yoki GPS o‘chiq. Sozlamalardan ruxsat bering — jonli kuzatuv uchun kerak.",
+"trackingLastUpdatedPrefix": "So‘nggi yangilanish:",
+"senderTrackingWaitingCourierLocation": "Kuryer joylashuvi hali uzatilmagan. Kuryer ushbu buyurtmani ilovada ochgan va yo‘lga chiqqanidan keyin xarita paydo bo‘ladi.",
+"senderTrackingNoCoordinatesForLeg": "Bu marshrut uchun manzil koordinatalari kiritilmagan.",
+"senderTrackingTapToEnlarge": "Kattalashtirish uchun xaritaga bosing",
+"senderTrackingFullscreenTitlePickup": "Kuryer — olish nuqtasi",
+"senderTrackingFullscreenTitleDropoff": "Kuryer — yetkazish manzili",
+"senderTrackingDistanceMeters": "{m} m",
+"@senderTrackingDistanceMeters": {
+  "placeholders": {
+    "m": {"type": "int"}
+  }
+},
+"senderTrackingDistanceKm": "{km} km",
+"@senderTrackingDistanceKm": {
+  "placeholders": {
+    "km": {"type": "String"}
+  }
+},
+"senderTrackingEtaApproxMinutes": "Taxminan {minutes} daqiqa",
+"@senderTrackingEtaApproxMinutes": {
+  "placeholders": {
+    "minutes": {"type": "int"}
+  }
+},
+"senderTrackingEtaHoursMinutes": "Taxminan {hours} soat {minutes} daqiqa",
+"@senderTrackingEtaHoursMinutes": {
+  "placeholders": {
+    "hours": {"type": "int"},
+    "minutes": {"type": "int"}
+  }
+},
+"senderNotificationsSheetTitle": "Bildirishnomalar",
+"senderNotificationsLoadError": "Bildirishnomalarni yuklab bo‘lmadi",
+"senderNotificationsTapToRead": "Batafsil uchun bosing",
+"senderNotificationsTimeJustNow": "Hozirgina",
+"senderNotificationsTimeMinutesAgo": "{count} daqiqa oldin",
+"@senderNotificationsTimeMinutesAgo": {
+  "placeholders": {
+    "count": {
+      "type": "int"
+    }
+  }
+},
+"senderNotificationsTimeHoursAgo": "{count} soat oldin",
+"@senderNotificationsTimeHoursAgo": {
+  "placeholders": {
+    "count": {
+      "type": "int"
+    }
+  }
+},
+"createJobMenuMore": "Sozlamalar",
+"createJobMenuChangeTheme": "Rejimni o‘zgartirish",
+"createJobMenuContactUs": "Biz bilan bog‘lanish",
+"createJobThemeTitle": "Rejimni tanlang",
+"createJobThemeLight": "Kunduzgi rejim",
+"createJobThemeDark": "Tungi rejim",
+"createJobThemeSystem": "Tizim bo‘yicha",
+"createJobContactTitle": "Biz bilan bog‘lanish",
+"createJobContactPickType": "Murojaat turini tanlang",
+"createJobContactComplaint": "Shikoyat",
+"createJobContactPraise": "Maqtov",
+"createJobContactApplication": "Ariza",
+"createJobContactSuggestion": "Taklif",
+"createJobContactMessageLabel": "Murojaatingizni yozing",
+"createJobContactMessageHint": "Murojaat matnini kiriting",
+"createJobContactSubmit": "Yuborish",
+"createJobContactSuccess": "Murojaatingiz yuborildi",
+"createJobValidationContactType": "Murojaat turini tanlang",
+"createJobValidationContactMessage": "Murojaat matnini kiriting",
+"createJobValidationMessageTooShort": "Matn juda qisqa (kamida 15 belgi)",
+"adminContactRequests": "Murojaatlar",
+"adminContactRequestsSubtitle": "Foydalanuvchi xabarlari",
+"adminContactRequestDetail": "Murojaat tafsilotlari",
+"supportRequestStatusNew": "Yangi",
+"supportRequestStatusRead": "O‘qilgan",
+"supportRequestStatusResolved": "Hal qilindi",
+"supportRequestFullMessage": "To‘liq matn",
+"supportRequestMarkRead": "O‘qilgan deb belgilash",
+"supportRequestMarkResolved": "Hal qilindi",
+"adminPanelSubtitle": "Kuryer boshqaruv paneli",
+"adminBottomNavDashboard": "Boshqaruv",
+"adminBottomNavUsers": "Foydalanuvchilar",
+"adminBottomNavOrders": "Buyurtmalar",
+"adminBottomNavAuctions": "Auksionlar",
+"adminBottomNavReports": "Hisobotlar",
+"adminBottomNavFinance": "Moliya",
+"adminPanelNavSettings": "Sozlamalar",
+"adminQuickActionsTitle": "Tezkor amallar",
+"adminActionViewList": "Ko'rish",
+"adminActionEditRole": "Rolni tahrirlash",
+"adminActionBan": "Bloklash",
+"adminActionUnblock": "Blokdan chiqarish",
+"adminActionVerify": "Tasdiqlash",
+"adminFinanceSectionTitle": "Moliya va tranzaksiyalar",
+"adminFinanceTotalRevenue": "Jami tushum",
+"adminFinanceCommissions": "Olingan komissiyalar",
+"adminFinanceSuccessfulPayments": "Muvaffaqiyatli to'lovlar",
+"adminFinanceCourierPayouts": "Kuryer to'lovlari",
+"adminFinanceDemoHint": "Namuna ko'rsatkichlar",
+"adminReportsSectionTitle": "Hisobotlar va shikoyatlar",
+"adminOrderFilterAll": "Barchasi",
+"adminOrderFilterPending": "Kutilmoqda",
+"adminOrderFilterAuction": "Auksion",
+"adminOrderFilterInDelivery": "Yetkazilmoqda",
+"adminOrderFilterCompleted": "Bajarildi",
+"adminUserFilterAll": "Barchasi",
+"adminUserFilterSenders": "Yuboruvchilar",
+"adminUserFilterCouriers": "Kuryerlar",
+"adminUserFilterBlocked": "Bloklanganlar",
+"adminUserFilterNew": "Yangilar",
+"adminUserFilterComplaints": "Shikoyatli",
+"adminUserFilterAdmins": "Adminlar",
+"adminSettingsSectionShortcuts": "Tizim va yo'nalishlar",
+"adminOpenStatistics": "Statistikani ochish",
+"adminOpenMap": "Jonli xarita",
+"adminOpenContactRequests": "Murojaatlarni ochish",
+"adminOpenFullSettings": "Ilova sozlamalari",
+"adminComingSoonNotifications": "Bildirishnomalar tez orada",
+"adminSearchHint": "Qidirish",
+"adminLanguageTileTitle": "Ilova tili",
+"adminOrdersSectionTitle": "Buyurtmalar",
+"adminAuctionsSectionTitle": "Auksionlar",
+"adminNoJobsInList": "Ro'yxat bo'sh",
+"adminRegionPerformanceTitle": "Hududlar bo'yicha samaradorlik",
+"adminRegionPerformanceHint": "Namuna jadval — keyinroq real ma'lumot",
+"adminAnalyticsSectionTitle": "Tahlil va diagrammalar",
+"adminChartDeliveryGrowth": "Yetkazib berish dinamikasi",
+"adminChartUsersVsCourier": "Foydalanuvchilar va kuryerlar",
+"adminChartCompletionDonut": "Yakunlangan buyurtmalar ulushi",
+"adminDesignSampleChartNote": "Diagrammalar statistikaga moslashtirilgan namuna",
+"adminStatusActive": "Faol",
+"adminStatusBlockedShort": "Bloklangan",
+"adminUserManagementTitle": "Foydalanuvchilarni boshqarish",
+"adminJobOrderNumber": "№ {id}",
+"@adminJobOrderNumber": {
+  "placeholders": {
+    "id": {"type": "String"}
+  }
+},
+"adminPickupInfo": "Olib ketish",
+"adminDropoffInfo": "Yetkazish",
+"adminReportSenderCourierComplaints": "Yuboruvchi / kuryer shikoyatlari",
+"adminReportFlaggedOrders": "Belgilangan buyurtmalar",
+"adminReportUrgentHighlights": "Muhim xabarlar",
+"adminActionQuickResolve": "Tez hal qilish",
+"adminActionReject": "Rad etish",
+"adminActionInvestigate": "O'rganish",
+"adminFinancePendingPayouts": "Kutilayotgan to'lovlar",
+"adminDistrictActivityTitle": "Tumanlar bo'yicha faollik",
+"adminOrderHotspotsTitle": "Buyurtmalar nuqtalari",
+"adminCourierAvailabilityTitle": "Kuryer bandligi (namuna)",
+"adminGridAddAdmin": "Admin qo'shish",
+"adminGridManageRoles": "Rollarni boshqarish",
+"adminGridViewReports": "Hisobotlar",
+"adminGridBlockUser": "Bloklash",
+"adminGridApproveCourier": "Kuryerni tasdiqlash",
+"adminGridMonitorAuctions": "Auksionlar",
+"adminGridSystemSettings": "Tizim sozlamalari",
+"adminBottomNavFeedback": "Feedback",
+"adminBottomNavRegions": "Hududlar",
+"adminControlOverviewTitle": "Operatsion ko‘rinish",
+"adminControlFeedbackTitle": "Feedback va sifat",
+"adminControlGeoTitle": "Geografiya",
+"adminControlAuctionTitle": "Auksion va yetkazish",
+"adminControlUsersTotal": "Jami foydalanuvchilar",
+"adminControlSenders": "Yuboruvchilar",
+"adminControlCouriers": "Kuryerlar",
+"adminControlOrdersTotal": "Jami buyurtmalar",
+"adminControlPosted": "E’lon qilingan",
+"adminControlAuctionLive": "Auksionda",
+"adminControlAssigned": "Tayinlangan",
+"adminControlPickedUp": "Olib ketilgan",
+"adminControlDelivered": "Yetkazilgan",
+"adminControlCompleted": "Yakunlangan",
+"adminControlCancelled": "Bekor qilingan",
+"adminControlBlocked": "Bloklangan",
+"adminControlRatingsTotal": "Jami baholar",
+"adminControlAvgRating": "O‘rtacha baho",
+"adminControlComplaintsNew": "Shikoyatlar (order_feedback)",
+"adminControlPraises": "Maqtovlar",
+"adminControlLegacyComplaints": "Eski shikoyatlar",
+"adminControlTopComplaintTargets": "Eng ko‘p shikoyat olgan (kimga)",
+"adminControlTopCouriersRating": "Profil bahosi bo‘yicha kuryerlar",
+"adminControlUsersByRegion": "Viloyat bo‘yicha userlar",
+"adminControlJobsByRegion": "Viloyat bo‘yicha buyurtmalar",
+"adminControlDistrictsHint": "Tumanlar (userlar, top)",
+"adminControlAuctionsTouched": "Auksion ishtiroki",
+"adminControlAvgBids": "O‘rtacha takliflar soni",
+"adminControlAvgDiscount": "O‘rtacha narx pasayishi (birlik)",
+"adminControlCompletedDeliveries": "Yakunlangan yetkazishlar",
+"adminControlActiveTracking": "Faol kuzatuv (tracking)",
+"adminOrderFilterComplaint": "Shikoyatli",
+"adminOrderFilterAuctionBids": "Taklif bo‘lgan",
+"adminOrderFilterRecent30": "So‘nggi 30 kun",
+"adminUserFilterLowRating": "Past baho",
+"adminUserRegionAll": "Barcha viloyatlar",
+"adminUserRegionFilterHint": "Viloyat bo‘yicha",
+"adminFeedbackSectionTitle": "Feedback va shikoyatlar",
+"adminFeedbackTabComplaints": "Shikoyatlar",
+"adminFeedbackTabAll": "Hammasi",
+"adminFeedbackLowRating": "Past baho (≤2)",
+"adminFeedbackSenderToCourier": "Yuboruvchi → kuryer",
+"adminComplaintReview": "Ko‘rib chiqish",
+"adminComplaintStatusLabel": "Holat",
+"adminComplaintNoteLabel": "Admin izohi",
+"adminComplaintSave": "Saqlash",
+"adminComplaintStatusNew": "Yangi",
+"adminComplaintStatusReviewed": "Ko‘rib chiqilgan",
+"adminComplaintStatusResolved": "Hal qilingan",
+"adminRegionsSectionTitle": "Hudud tahlili",
+"adminRegionsCompleted": "Yakunlangan buyurtmalar",
+"adminRegionsOrders": "Buyurtmalar",
+"adminRegionsSenders": "Yuboruvchilar",
+"adminRegionsCouriers": "Kuryerlar",
+"adminRegionsComplaints": "Shikoyatlar (user)",
+"adminRegionsSelectRegion": "Viloyat tafsiloti",
+"adminHeaderSettings": "Sozlamalar",
+"adminMetaFrom": "Kimdan",
+"adminMetaTo": "Kimga"
+}
+

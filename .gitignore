@@ -1,0 +1,37 @@
+# Flutter
+.dart_tool/
+.packages
+build/
+.pub-cache/
+.pub/
+**/doc/api/
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/Flutter.podspec
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+**/android/.gradle/
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+**/android/key.properties
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Misc
+.DS_Store
+
+# Logs / temp
+*.log
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+.vscode/
+
+# Optional secrets
+.env
+.env.*

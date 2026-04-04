@@ -1,0 +1,50 @@
+name: courier_auction
+description: Courier marketplace with descending-price auction — production app.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  supabase_flutter: ^2.5.6
+  flutter_riverpod: ^2.6.1
+  intl: ^0.20.2
+  google_fonts: ^6.3.0
+  go_router: ^14.6.2
+  shared_preferences: ^2.3.3
+  sqflite: ^2.4.1
+  sqflite_common_ffi: ^2.3.4
+  path: ^1.9.0
+  path_provider: ^2.1.5
+  uuid: ^4.5.1
+  image_picker: ^1.1.2
+  file_picker: ^8.1.4
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1
+  http: ^1.2.2
+  geolocator: ^13.0.2
+  fl_chart: ^0.69.2
+  firebase_core: ^4.6.0
+  firebase_messaging: ^16.1.3
+  flutter_local_notifications: ^21.0.0
+  device_info_plus: ^12.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  image: ^4.8.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+  assets:
+    - assets/images/logo.png
+    - assets/images/login_illustration.png
+    - assets/images/otp_hero.png

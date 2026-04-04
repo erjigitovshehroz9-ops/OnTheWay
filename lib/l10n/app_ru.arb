@@ -1,0 +1,727 @@
+{
+  "@@locale": "ru",
+  "appTitle": "Курьер Аукцион",
+  "splashTagline": "Быстро. Современно. Удобная доставка.",
+  "getStarted": "Начать",
+  "language": "Язык",
+  "languageUzbek": "Узбекский",
+  "languageRussian": "Русский",
+  "languageEnglish": "Английский",
+  "back": "Назад",
+  "continueWord": "Продолжить",
+  "save": "Сохранить",
+  "retry": "Повторить",
+  "loading": "Загрузка…",
+  "errorGeneric": "Неизвестная ошибка",
+  "phoneLoginTitle": "Ваш номер телефона",
+  "phoneHint": "+998 __ ___ __ __",
+  "sendCode": "Отправить код",
+  "errorInvalidPhone": "Введите корректный номер",
+  "smsTitle": "SMS подтверждение",
+  "smsSubtitle": "Введите код из SMS",
+  "verify": "Подтвердить",
+  "resendCode": "Отправить код снова",
+  "errorInvalidCode": "Неверный или просроченный код",
+  "offerTitle": "Публичная оферта",
+  "offerWelcome": "Добро пожаловать",
+  "offerBody": "В этой оферте описаны правила оказания услуг, платежей, ответственности и обработки данных. Без согласия с офертой регистрация невозможна.",
+  "offerAcceptCheckbox": "Я согласен с условиями оферты",
+  "acceptAndContinue": "Принять и продолжить",
+  "errorMustAcceptOffer": "Примите оферту, чтобы продолжить",
+  "chooseRoleTitle": "Выберите роль",
+  "roleSender": "Отправитель",
+  "roleSenderDesc": "Создание заказа и выбор курьера",
+  "roleCourier": "Курьер",
+  "roleCourierDesc": "Участие в аукционе",
+  "roleAdmin": "Администратор",
+  "roleAdminDesc": "Управление платформой",
+  "confirmRole": "Выбрать",
+  "senderHomeTitle": "Главная",
+  "courierHomeTitle": "Панель курьера",
+  "adminHomeTitle": "Админ-панель",
+  "whereToHint": "Куда доставить?",
+  "createJob": "Создать заказ",
+  "nearbyCouriers": "Курьеры рядом",
+  "activeJobs": "Активные заказы",
+  "demoJobCardTitle": "Демо заказ",
+  "contactsHiddenUntilAuction": "Контакты скрыты до конца аукциона",
+  "contactsVisibleAfterWinner": "После выбора победителя откроются звонок и чат",
+  "auctionStatusLive": "Аукцион идёт",
+  "auctionStatusEnded": "Аукцион завершён",
+  "winnerSelected": "Победитель выбран",
+  "topBid": "Лучшая ставка",
+  "timeLeft": "Осталось",
+  "secondsShort": "{count} с",
+  "placeBid": "Сделать ставку",
+  "jobDescriptionLabel": "Описание",
+  "jobTitleLabel": "Название заказа",
+  "translateDemoHint": "Введите текст — сохранится на 3 языках (демо-перевод)",
+  "previewForLocale": "Как видно на текущем языке",
+  "storedUz": "Оригинал (узб.)",
+  "storedRu": "Сохранено (рус.)",
+  "storedEn": "Сохранено (англ.)",
+  "logout": "Выйти",
+  "settings": "Настройки",
+  "userDemoName": "Пользователь",
+  "selectWinner": "Выбрать победителя",
+  "signInRequired": "Войдите в аккаунт",
+  "noOpenAuctions": "Сейчас нет открытых аукционов",
+  "courierOrdersTabAuction": "Список",
+  "courierOrdersSubtabList": "Заказы",
+  "courierOrdersTabInProgress": "В работе",
+  "courierOrdersTabCompleted": "Выполнено",
+  "courierOrdersEmptyInProgress": "Пока нет заказов в работе. После аукциона, если вы победите, они появятся здесь.",
+  "courierOrdersEmptyCompleted": "Пока нет выполненных заказов.",
+  "adminDashboard": "Admin panel",
+  "adminStatistics": "Statistika",
+  "adminUsers": "Foydalanuvchilar",
+  "adminLiveMap": "Jonli xarita",
+
+  "adminSectionOverview": "Ключевые показатели",
+  "adminSectionOrders": "Заказы и аукционы",
+  "adminSectionUsersSecurity": "Пользователи и безопасность",
+  "adminSectionShortcuts": "Быстрые действия",
+  "adminChartOrderStatus": "Структура заказов",
+  "adminNavStatsSubtitle": "Аналитика по регионам",
+  "adminNavUsersSubtitle": "Роли и блокировки",
+  "adminNavMapSubtitle": "Позиции курьеров",
+  "adminMapMarkerCount": "{count} точек курьеров",
+  "@adminMapMarkerCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminMapEmptyNoJobsTitle": "Нет живого трекинга",
+  "adminMapEmptyNoJobsBody": "Сейчас нет заказов с активным отслеживанием. Обновите позже.",
+  "adminMapEmptyNoGpsTitle": "Нет координат",
+  "adminMapEmptyNoGpsBody": "Заказы есть, но координаты курьеров ещё не поступили.",
+  "chartLegendCompleted": "Завершено",
+  "chartLegendActive": "В работе",
+  "chartLegendCancelled": "Отменено",
+
+  "statTotalUsers": "Jami foydalanuvchilar",
+  "statSenders": "Yuboruvchilar soni",
+  "statCouriers": "Kuryerlar soni",
+  "statActiveJobs": "Faol buyurtmalar",
+  "statLiveAuctions": "Faol auksionlar",
+  "statCompleted": "Bajarilgan buyurtmalar",
+  "statUncompletedJobs": "Bajarilmagan buyurtmalar",
+  "statCancelled": "Bekor qilingan",
+  "statBlocked": "Bloklangan foydalanuvchilar",
+  "statComplaints": "Shikoyatlar soni",
+
+  "noJobsFound": "Buyurtmalar topilmadi",
+
+  "regionLabel": "Viloyat",
+  "districtLabel": "Tuman/Shahar",
+
+  "tabList": "Ro‘yxat",
+  "tabMap": "Xarita",
+
+  "courierMapNoOrdersInDistrict": "В этом районе заказов нет",
+  "courierMapOpenDetail": "Подробнее",
+  "courierMapCoordsShort": "{lat}, {lng}",
+  "@courierMapCoordsShort": {
+    "placeholders": {
+      "lat": { "type": "String" },
+      "lng": { "type": "String" }
+    }
+  },
+
+  "courierPanelBannerTitle": "ПАНЕЛЬ КУРЬЕРА",
+  "courierGreeting": "Здравствуйте, {name}!",
+  "@courierGreeting": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "courierNavHome": "Главная",
+  "courierNavOrders": "Заказы",
+  "courierNavMaps": "Карты",
+  "courierNavAccount": "Профиль",
+  "senderBottomNavSwitchRole": "Смена роли",
+  "bottomNavWallet": "Счёт",
+  "courierCardCreated": "Создано",
+  "courierStatusWaiting": "В процессе",
+  "courierDeliveredBadge": "Доставлено",
+  "courierCardIdLabel": "ID",
+
+  "jobDetails": "Buyurtma tafsilotlari",
+  "jobDetailProductInfoTitle": "Сведения о товаре",
+  "jobDetailNoProductImage": "Фото товара не загружено",
+  "jobDetailVolumeShort": "Объём",
+  "pickupLocation": "Qayerdan olinadi",
+  "dropoffLocation": "Qayerga yetkaziladi",
+  "mapDualFlowCardTitle": "Укажите адреса на карте",
+  "mapPickerNextDropoff": "Далее: адрес доставки",
+  "mapPickerConfirmBoth": "Подтвердить адреса",
+
+  "recipientNameLabel": "Qabul qiluvchi ismi",
+  "recipientPhoneLabel": "Qabul qiluvchi telefoni",
+  "recipientPhoneHelper": "+998 отображается автоматически. Введите ещё 9 цифр — иначе курьер может не дозвониться.",
+
+  "joinAuctionCta": "Auksionga qo‘shilish",
+  "acceptLowerPrice": "Narxni qabul qilish",
+
+  "statusAuction": "Auksion",
+  "statusCompleted": "Bajarildi",
+
+  "complaint": "Shikoyat",
+  "praise": "Maqtov",
+
+  "mapSearch": "Qidiruv",
+  "selectedLocation": "Tanlangan joy",
+  "recenterMap": "Markazga qaytarish",
+"blockUser": "Foydalanuvchini bloklash",
+"auctionCurrentOffer": "Joriy taklif",
+"auctionFloor": "Minimal narx",
+"timeLeftShort": "Qolgan vaqt",
+"auctionHistory": "Auksion tarixi",
+  "auctionLiveScreenTitle": "Аукцион в прямом эфире",
+  "auctionOngoingLabel": "Аукцион продолжается",
+  "auctionWaitingStartLabel": "Ожидание начала аукциона",
+  "auctionTimeLeftLine": "Осталось {time}",
+  "@auctionTimeLeftLine": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "auctionCouriersParticipatingCount": "Участвует курьеров: {count}",
+  "@auctionCouriersParticipatingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "auctionOrderDetailsTitle": "Детали заказа",
+  "auctionPickupMapLabel": "Забор:",
+  "auctionDropoffMapLabel": "Доставка:",
+  "auctionRouteDistance": "{km} км",
+  "@auctionRouteDistance": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "auctionSenderTrustTitle": "Об отправителе",
+  "auctionCourierRatingsTitle": "Рейтинг курьеров",
+  "auctionAgreePriceCta": "Согласен с ценой →",
+  "auctionWatchCta": "Наблюдать",
+  "auctionParticipateOutlined": "Участвовать",
+  "auctionYouAreLeading": "Вы лидируете",
+  "auctionReviewsCount": "{count} отзывов",
+  "@auctionReviewsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "auctionStartPriceLabel": "Стартовая цена",
+  "auctionHozirgiTaklif": "Текущая ставка",
+  "auctionYourPriceLabel": "Ваша принятая цена",
+  "auctionNextOfferLabel": "Следующее предложение («Согласен с ценой»)",
+  "auctionEndedYouWonBody": "Поздравляем! Заказ закреплён за вами. Продолжайте в списке заказов.",
+  "auctionEndedOtherWinnerBody": "Аукцион завершился в пользу другого курьера.",
+  "auctionEndedNoWinnerBody": "Время вышло. Заказ снова доступен для аукциона.",
+  "auctionEndedGenericBody": "Аукцион завершён.",
+
+"chooseRoleSubtitle": "Ilovadan qanday foydalanmoqchisiz?",
+
+"stepProduct": "Mahsulot",
+"stepAddresses": "Manzillar",
+"stepRecipient": "Qabul qiluvchi",
+"stepReview": "Tekshirish",
+
+"fragileItem": "Nozik mahsulot",
+"needsColdChain": "Холодная цепь",
+
+"completedJobsLabel": "Bajarilgan ishlar",
+
+"markPickedUp": "Qabul qildim",
+"markDelivered": "Yetkazib berdim",
+
+"orderContactSectionTitle": "Контакты",
+"orderWinnerOutcomeTitle": "Победитель определён",
+"orderFinalPriceLabel": "Итоговая цена",
+"orderWinnerSelectedAtLabel": "Время выбора",
+"orderAuctionStepsCountLabel": "Шаги аукциона",
+"orderAddressesHiddenForNonWinner": "Адреса видны только победившему курьеру.",
+"courierRatingStarsLabel": "Рейтинг: {value}",
+"@courierRatingStarsLabel": {
+  "placeholders": {
+    "value": {
+      "type": "String"
+    }
+  }
+},
+
+"deliveryNoteOptional": "Izoh (ixtiyoriy)",
+"submitFeedback": "Оставить отзыв",
+  "feedbackComplaintTitle": "Опишите жалобу",
+  "feedbackComplaintHint": "Кратко опишите, что произошло…",
+  "feedbackPraiseTitle": "Благодарность",
+  "feedbackPraiseStarsHint": "Оцените от 1 до 5 звёзд",
+  "feedbackPraiseEmojiHint": "Или выберите смайл:",
+  "feedbackSend": "Отправить",
+  "feedbackSentThanks": "Спасибо, отзыв сохранён",
+  "feedbackAlreadySubmitted": "Вы уже оставили отзыв по этому заказу (один раз: жалоба или благодарность).",
+  "rateCourierCta": "Оценить курьера",
+  "rateSenderCta": "Оценить отправителя",
+  "orderFeedbackSheetTitleCourier": "Оцените курьера",
+  "orderFeedbackSheetTitleSender": "Оцените отправителя",
+  "orderFeedbackStarsLabel": "Оценка (1–5 звёзд, обязательно)",
+  "orderFeedbackTypeNeutral": "Только оценка",
+  "orderFeedbackTypeComplaint": "Жалоба",
+  "orderFeedbackTypePraise": "Благодарность",
+  "orderFeedbackCommentOptional": "Комментарий (необязательно)",
+  "orderFeedbackYourSummaryTitle": "Ваш отзыв",
+  "orderFeedbackSummaryRating": "{stars} / 5",
+  "@orderFeedbackSummaryRating": {
+    "placeholders": {
+      "stars": { "type": "int" }
+    }
+  },
+  "orderFeedbackSummaryTypeRating": "Оценка",
+  "orderFeedbackSummaryTypeComplaint": "Жалоба",
+  "orderFeedbackSummaryTypePraise": "Благодарность",
+  "orderFeedbackSummaryCategory": "Категория: {name}",
+  "@orderFeedbackSummaryCategory": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "fbCatComplaintLate": "Опоздал",
+  "fbCatComplaintRude": "Плохое общение",
+  "fbCatComplaintCareless": "Небрежное отношение к заказу",
+  "fbCatComplaintAddress": "Проблема с адресом",
+  "fbCatOther": "Другое",
+  "fbCatPraiseFast": "Быстрая доставка",
+  "fbCatPraisePolite": "Вежливый",
+  "fbCatPraiseCareful": "Аккуратный",
+  "fbCatPraiseReliable": "Чёткий и надёжный",
+
+"catComplaintLate": "Kechikdi",
+"catComplaintDamaged": "Zarar yetdi",
+"catComplaintCommunication": "Yomon aloqa",
+
+"catPraiseFast": "Tez yetkazdi",
+"catPraisePolite": "Xushmuomala",
+"catPraiseCareful": "Ehtiyotkor",
+
+"feedbackCategory": "Kategoriya",
+
+"validationRequired": "Majburiy maydon",
+  "fieldOptionalHint": "Необязательно",
+
+"createOrderTitle": "Buyurtma yaratish",
+
+"createJobConfirmTitle": "Подтверждение заказа",
+"createJobSenderAddressLabel": "Адрес отправителя",
+"createJobReceiverAddressLabel": "Адрес получателя",
+"createJobDeliveryTimeSection": "Время доставки",
+"createJobPickupSlotLabel": "Забор",
+"createJobDeliverySlotLabel": "Доставка",
+"createJobAboutPackage": "О посылке",
+"createJobPackageTypeShort": "Тип",
+"createJobPackageSizeShort": "Размер",
+"createJobPackageWeightShort": "Вес",
+"createJobPackageDescShort": "Описание",
+"createJobEstimatedPrice": "Ориентировочная цена",
+"createJobFinalPriceDisclaimer": "Итоговая цена определяется на аукционе",
+"createJobAuctionHint": "После размещения заказа курьеры примут участие в аукционе",
+"createJobPlaceOrder": "Разместить заказ",
+
+"productNameLabel": "Mahsulot nomi",
+"productTypeLabel": "Mahsulot turi",
+
+"weightKg": "Вес (кг)",
+"volumeCategoryLabel": "Категория объёма",
+"orderCommentsLabel": "Дополнительный комментарий",
+"orderCommentsHint": "Дополнительная информация о заказе",
+"orderCommentsCharCounter": "{current}/{max}",
+"@orderCommentsCharCounter": {
+  "placeholders": {
+    "current": {"type": "int"},
+    "max": {"type": "int"}
+  }
+},
+"orderSuitableTransportTitle": "Подходящий транспорт",
+"orderRequiredTransportTitle": "Тип транспорта",
+"validationSelectSuitableTransport": "Выберите хотя бы один транспорт (можно несколько)",
+"validationSelectOneTransport": "Выберите один тип транспорта для заказа",
+"transportLabelPiyoda": "Пешком",
+"transportLabelVelosiped": "Велосипед / скутер",
+"transportLabelMoto": "Мото",
+"transportLabelAvto": "Авто",
+"transportLabelTruck": "Крупный грузовик",
+"courierTransportEmptyTitle": "Тип транспорта не выбран",
+"courierTransportEmptySubtitle": "Чтобы видеть подходящие заказы, укажите в профиле хотя бы один тип транспорта.",
+"courierTransportChooseAction": "Выбрать транспорт",
+"courierProfileTransportLabel": "Типы транспорта",
+"courierProfileTransportChange": "Изменить",
+"courierTransportSheetTitleProfile": "Обновите типы транспорта",
+"courierTransportSheetTitleSetup": "Выберите тип транспорта",
+"courierFilterAllDistricts": "Все районы",
+"jobTransportMismatchMessage": "Этот заказ не подходит под ваши типы транспорта.",
+"volumeCatVerySmall": "Очень маленький",
+"volumeCatSmall": "Маленький",
+"volumeCatMedium": "Средний",
+"volumeCatLarge": "Большой",
+"volumeCatVeryLarge": "Крупный+",
+"dimensionsMmLabel": "Размеры (мм)",
+"dimensionsMmHint": "1000x500x200",
+"validationDimensionsFormat": "Формат: три числа, например 1000x500x200",
+"validationDimensionsRequired": "Для этого объёма размер обязателен",
+
+"startingPrice": "Начальная цена",
+
+"paymentType": "To‘lov turi",
+"paymentCash": "Naqd",
+"paymentCard": "Karta",
+"paymentPrepaid": "Oldindan",
+
+"deliveryTimeTitle": "Yetkazish vaqti",
+"deliveryFast": "Tez",
+"deliveryRelaxed": "Bemalol",
+"deliveryCustom": "Vaqtni tanlash",
+
+"deliveryUntilHint": "Например: до 21:00",
+
+"mapAddressCity": "Город",
+"mapAddressDistrict": "Район",
+"mapAddressRegion": "Область",
+
+"mapDistanceLabel": "Расстояние",
+"mapDistanceApproximate": "Приблизительно (по прямой)",
+"mapPickupMarkerHint": "Точка забора",
+
+"jobRouteMapTitle": "Карта маршрута",
+"jobMapNoCoordinates": "Нет координат для карты.",
+"jobMapMarkerA": "A",
+"jobMapMarkerB": "B",
+"jobMapOneCoordinateOnly": "Есть координаты только одного адреса — расстояние не показано.",
+
+"courierJobMapToPickupTitle": "Маршрут к точке забора (A)",
+"courierJobMapToDropoffTitle": "Маршрут к точке доставки (B)",
+"courierJobMapGpsUnavailable": "Не удалось определить местоположение. Нажмите «Моё местоположение».",
+
+"jobDimensionsMm": "Размеры (мм)",
+
+"productPhoto": "Фото товара",
+"validationProductPhotoRequired": "Добавьте фото товара",
+"takePhoto": "Rasmga olish",
+"chooseFile": "Fayldan tanlash",
+
+"searchJobsHint": "Buyurtmalarni qidirish",
+
+"profileSection": "Профиль",
+"senderProfileNameLabel": "Имя",
+"senderProfilePhoneLabel": "Телефон",
+"senderProfileRoleLabel": "Роль",
+"senderProfileLanguageLabel": "Язык",
+"senderProfileStatusLabel": "Статус",
+"senderProfileNameEmpty": "Имя не указано",
+"senderProfilePhoneEmpty": "Нет номера телефона",
+"senderProfileStatusActive": "Активен",
+"senderProfileStatusBlocked": "Заблокирован",
+"senderProfilePhoneVerified": "Телефон подтверждён",
+"senderProfilePhoneNotVerified": "Телефон не подтверждён",
+"senderProfileVerificationLabel": "Статус телефона",
+"senderWalletTitle": "Кошелёк",
+"senderWalletSubtitle": "Скоро будет доступно.",
+"senderProfileEditSection": "Редактирование",
+"senderProfileFullNameLabel": "Полное имя",
+"senderProfileFullNameHint": "Имя и фамилия",
+"senderProfileSecondaryPhoneLabel": "Доп. телефон",
+"senderProfileSecondaryPhoneHint": "+998 __ ___ __ __",
+"senderProfileChangePhoto": "Сменить фото",
+"senderProfileRemovePhoto": "Удалить фото",
+"senderProfileEditTooltip": "Изменить",
+"senderProfileSave": "Сохранить",
+"senderProfileSaving": "Сохранение…",
+"senderProfileSaveSuccess": "Профиль обновлён",
+"senderProfileInvalidSecondaryPhone": "Введите корректный номер Узбекистана",
+"senderProfileSecondarySameAsPrimary": "Укажите номер, отличный от основного",
+"senderProfilePrimaryPhoneReadOnly": "Основной телефон (аккаунт)",
+"openAdminPanel": "Admin panelga o‘tish",
+
+"statusPosted": "Yaratildi",
+  "senderOrderStatusPosted": "Ожидание",
+  "senderOrderPriceLabel": "Цена",
+  "senderOrderMinStavkaSuffix": "(мин. ставка)",
+  "senderOrderContactsHint": "После выбора курьера появятся контактные данные",
+"statusAssigned": "Biriktirildi",
+"statusPickedUp": "Olib ketildi",
+"statusDelivered": "Yetkazildi",
+
+"senderNotificationsTooltip": "Уведомления",
+"senderNotificationsEmpty": "Новых уведомлений пока нет",
+"senderSnackbarAuctionStarted": "Аукцион начался — заказ в разделе «В процессе»",
+"senderSnackbarAuctionEndedAssigned": "Аукцион завершён — назначен курьер",
+"senderSnackbarAuctionEndedReopened": "Аукцион завершён — победителя нет, заказ снова в ожидании",
+"senderSnackbarAuctionEndedCancelled": "Аукцион завершён — заказ отменён",
+  "senderNotifCourierNearPickup1Km": "Курьер приближается к точке забора (~1 км)",
+  "senderNotifCourierNearDropoff5Km": "Курьер приближается к точке доставки (~5 км)",
+  "senderNotifCourierNearDropoff2Km": "Курьер приближается к точке доставки (~2 км)",
+"senderNotifAuctionStartedBody": "«{product}». Курьеры подают предложения по этому заказу. Заказ перенесён в раздел «В процессе».",
+"@senderNotifAuctionStartedBody": {
+  "placeholders": {
+    "product": {"type": "String"}
+  }
+},
+"senderNotifAuctionEndedAssignedBody": "«{product}». Победившей признана ставка курьера «{courier}»: {amount}. Полные сведения — в деталях заказа.",
+"@senderNotifAuctionEndedAssignedBody": {
+  "placeholders": {
+    "product": {"type": "String"},
+    "courier": {"type": "String"},
+    "amount": {"type": "String"}
+  }
+},
+"senderNotifAuctionReopenedBody": "«{product}». Аукцион завершён — победителя нет, заказ снова в ожидании.",
+"@senderNotifAuctionReopenedBody": {
+  "placeholders": {
+    "product": {"type": "String"}
+  }
+},
+"senderNotifAuctionCancelledBody": "«{product}». Аукцион завершён — заказ отменён.",
+"@senderNotifAuctionCancelledBody": {
+  "placeholders": {
+    "product": {"type": "String"}
+  }
+},
+"senderNotifOpenJobDetails": "Детали заказа",
+"senderNotifUnknownCourier": "Курьер",
+"liveTrackingBadge": "Онлайн‑слежение",
+"courierTrackingSendingLabel": "Передаётся местоположение",
+"courierTrackingLocationPermissionDenied": "Нет доступа к геолокации или GPS выключен. Разрешите доступ в настройках — нужно для онлайн‑слежения.",
+"trackingLastUpdatedPrefix": "Последнее обновление:",
+"senderTrackingWaitingCourierLocation": "Местоположение курьера пока не передаётся. Карта появится, когда курьер откроет заказ в приложении и выйдет в путь.",
+"senderTrackingNoCoordinatesForLeg": "Для маршрута нет координат адреса.",
+"senderTrackingTapToEnlarge": "Нажмите на карту, чтобы увеличить",
+"senderTrackingFullscreenTitlePickup": "Курьер — точка забора",
+"senderTrackingFullscreenTitleDropoff": "Курьер — доставка",
+"senderTrackingDistanceMeters": "{m} м",
+"@senderTrackingDistanceMeters": {
+  "placeholders": {
+    "m": {"type": "int"}
+  }
+},
+"senderTrackingDistanceKm": "{km} км",
+"@senderTrackingDistanceKm": {
+  "placeholders": {
+    "km": {"type": "String"}
+  }
+},
+"senderTrackingEtaApproxMinutes": "Около {minutes} мин",
+"@senderTrackingEtaApproxMinutes": {
+  "placeholders": {
+    "minutes": {"type": "int"}
+  }
+},
+"senderTrackingEtaHoursMinutes": "Около {hours} ч {minutes} мин",
+"@senderTrackingEtaHoursMinutes": {
+  "placeholders": {
+    "hours": {"type": "int"},
+    "minutes": {"type": "int"}
+  }
+},
+"senderNotificationsSheetTitle": "Уведомления",
+"senderNotificationsLoadError": "Не удалось загрузить уведомления",
+"senderNotificationsTapToRead": "Нажмите для подробностей",
+"senderNotificationsTimeJustNow": "Только что",
+"senderNotificationsTimeMinutesAgo": "{count} мин. назад",
+"@senderNotificationsTimeMinutesAgo": {
+  "placeholders": {
+    "count": {
+      "type": "int"
+    }
+  }
+},
+"senderNotificationsTimeHoursAgo": "{count} ч назад",
+"@senderNotificationsTimeHoursAgo": {
+  "placeholders": {
+    "count": {
+      "type": "int"
+    }
+  }
+},
+"createJobMenuMore": "Настройки",
+"createJobMenuChangeTheme": "Сменить тему",
+"createJobMenuContactUs": "Связаться с нами",
+"createJobThemeTitle": "Выберите тему",
+"createJobThemeLight": "Светлая",
+"createJobThemeDark": "Тёмная",
+"createJobThemeSystem": "Как в системе",
+"createJobContactTitle": "Связаться с нами",
+"createJobContactPickType": "Выберите тип обращения",
+"createJobContactComplaint": "Жалоба",
+"createJobContactPraise": "Благодарность",
+"createJobContactApplication": "Заявление",
+"createJobContactSuggestion": "Предложение",
+"createJobContactMessageLabel": "Ваше обращение",
+"createJobContactMessageHint": "Введите текст обращения",
+"createJobContactSubmit": "Отправить",
+"createJobContactSuccess": "Сообщение отправлено",
+"createJobValidationContactType": "Выберите тип обращения",
+"createJobValidationContactMessage": "Введите текст",
+"createJobValidationMessageTooShort": "Слишком короткий текст (мин. 15 символов)",
+"adminContactRequests": "Обращения",
+"adminContactRequestsSubtitle": "Сообщения пользователей",
+"adminContactRequestDetail": "Детали обращения",
+"supportRequestStatusNew": "Новое",
+"supportRequestStatusRead": "Прочитано",
+"supportRequestStatusResolved": "Решено",
+"supportRequestFullMessage": "Полный текст",
+"supportRequestMarkRead": "Пометить прочитанным",
+"supportRequestMarkResolved": "Пометить решённым",
+"adminPanelSubtitle": "Панель управления курьерами",
+"adminBottomNavDashboard": "Обзор",
+"adminBottomNavUsers": "Пользователи",
+"adminBottomNavOrders": "Заказы",
+"adminBottomNavAuctions": "Аукционы",
+"adminBottomNavReports": "Отчёты",
+"adminBottomNavFinance": "Финансы",
+"adminPanelNavSettings": "Настройки",
+"adminQuickActionsTitle": "Быстрые действия",
+"adminActionViewList": "Просмотр",
+"adminActionEditRole": "Роль",
+"adminActionBan": "Блок",
+"adminActionUnblock": "Разблок.",
+"adminActionVerify": "Проверка",
+"adminFinanceSectionTitle": "Финансы и транзакции",
+"adminFinanceTotalRevenue": "Всего поступлений",
+"adminFinanceCommissions": "Комиссии",
+"adminFinanceSuccessfulPayments": "Успешные оплаты",
+"adminFinanceCourierPayouts": "Выплаты курьерам",
+"adminFinanceDemoHint": "Примерные данные",
+"adminReportsSectionTitle": "Отчёты и жалобы",
+"adminOrderFilterAll": "Все",
+"adminOrderFilterPending": "Ожидание",
+"adminOrderFilterAuction": "Аукцион",
+"adminOrderFilterInDelivery": "Доставка",
+"adminOrderFilterCompleted": "Завершено",
+"adminUserFilterAll": "Все",
+"adminUserFilterSenders": "Отправители",
+"adminUserFilterCouriers": "Курьеры",
+"adminUserFilterBlocked": "Заблок.",
+"adminUserFilterNew": "Новые",
+"adminUserFilterComplaints": "Жалобы",
+"adminUserFilterAdmins": "Админы",
+"adminSettingsSectionShortcuts": "Система и разделы",
+"adminOpenStatistics": "Статистика",
+"adminOpenMap": "Карта",
+"adminOpenContactRequests": "Обращения",
+"adminOpenFullSettings": "Настройки приложения",
+"adminComingSoonNotifications": "Уведомления скоро",
+"adminSearchHint": "Поиск",
+"adminLanguageTileTitle": "Язык приложения",
+"adminOrdersSectionTitle": "Заказы",
+"adminAuctionsSectionTitle": "Аукционы",
+"adminNoJobsInList": "Список пуст",
+"adminRegionPerformanceTitle": "Эффективность по регионам",
+"adminRegionPerformanceHint": "Пример — позже реальные данные",
+"adminAnalyticsSectionTitle": "Аналитика и графики",
+"adminChartDeliveryGrowth": "Динамика доставок",
+"adminChartUsersVsCourier": "Пользователи и курьеры",
+"adminChartCompletionDonut": "Доля завершённых заказов",
+"adminDesignSampleChartNote": "Графики привязаны к статистике (образец)",
+"adminStatusActive": "Активен",
+"adminStatusBlockedShort": "Заблокирован",
+"adminUserManagementTitle": "Управление пользователями",
+"adminJobOrderNumber": "№ {id}",
+"@adminJobOrderNumber": {
+  "placeholders": {
+    "id": {"type": "String"}
+  }
+},
+"adminPickupInfo": "Забор",
+"adminDropoffInfo": "Доставка",
+"adminReportSenderCourierComplaints": "Жалобы отправителей / курьеров",
+"adminReportFlaggedOrders": "Помеченные заказы",
+"adminReportUrgentHighlights": "Срочные сообщения",
+"adminActionQuickResolve": "Быстрое решение",
+"adminActionReject": "Отклонить",
+"adminActionInvestigate": "Разобраться",
+"adminFinancePendingPayouts": "Ожидающие выплаты",
+"adminDistrictActivityTitle": "Активность по районам",
+"adminOrderHotspotsTitle": "Точки заказов",
+"adminCourierAvailabilityTitle": "Загрузка курьеров (пример)",
+"adminGridAddAdmin": "Добавить админа",
+"adminGridManageRoles": "Роли",
+"adminGridViewReports": "Отчёты",
+"adminGridBlockUser": "Блокировка",
+"adminGridApproveCourier": "Курьер ОК",
+"adminGridMonitorAuctions": "Аукционы",
+"adminGridSystemSettings": "Система",
+"adminBottomNavFeedback": "Отзывы",
+"adminBottomNavRegions": "Регионы",
+"adminControlOverviewTitle": "Оперативный обзор",
+"adminControlFeedbackTitle": "Отзывы и качество",
+"adminControlGeoTitle": "География",
+"adminControlAuctionTitle": "Аукцион и доставка",
+"adminControlUsersTotal": "Всего пользователей",
+"adminControlSenders": "Отправители",
+"adminControlCouriers": "Курьеры",
+"adminControlOrdersTotal": "Всего заказов",
+"adminControlPosted": "Опубликовано",
+"adminControlAuctionLive": "Аукцион",
+"adminControlAssigned": "Назначено",
+"adminControlPickedUp": "Забрано",
+"adminControlDelivered": "Доставлено",
+"adminControlCompleted": "Завершено",
+"adminControlCancelled": "Отменено",
+"adminControlBlocked": "Заблокировано",
+"adminControlRatingsTotal": "Всего оценок",
+"adminControlAvgRating": "Средняя оценка",
+"adminControlComplaintsNew": "Жалобы (order_feedback)",
+"adminControlPraises": "Похвалы",
+"adminControlLegacyComplaints": "Старые жалобы",
+"adminControlTopComplaintTargets": "Чаще всего жалуются (кому)",
+"adminControlTopCouriersRating": "Курьеры по рейтингу профиля",
+"adminControlUsersByRegion": "Пользователи по региону",
+"adminControlJobsByRegion": "Заказы по региону",
+"adminControlDistrictsHint": "Районы (пользователи, топ)",
+"adminControlAuctionsTouched": "Аукционы с активностью",
+"adminControlAvgBids": "Среднее число ставок",
+"adminControlAvgDiscount": "Среднее снижение цены (ед.)",
+"adminControlCompletedDeliveries": "Завершённые доставки",
+"adminControlActiveTracking": "Активное отслеживание",
+"adminOrderFilterComplaint": "С жалобой",
+"adminOrderFilterAuctionBids": "Со ставками",
+"adminOrderFilterRecent30": "30 дней",
+"adminUserFilterLowRating": "Низкий рейтинг",
+"adminUserRegionAll": "Все регионы",
+"adminUserRegionFilterHint": "Фильтр по региону",
+"adminFeedbackSectionTitle": "Отзывы и жалобы",
+"adminFeedbackTabComplaints": "Жалобы",
+"adminFeedbackTabAll": "Все",
+"adminFeedbackLowRating": "Низкая оценка (≤2)",
+"adminFeedbackSenderToCourier": "Отправитель → курьер",
+"adminComplaintReview": "Разбор",
+"adminComplaintStatusLabel": "Статус",
+"adminComplaintNoteLabel": "Заметка админа",
+"adminComplaintSave": "Сохранить",
+"adminComplaintStatusNew": "Новая",
+"adminComplaintStatusReviewed": "Просмотрена",
+"adminComplaintStatusResolved": "Решена",
+"adminRegionsSectionTitle": "Аналитика по регионам",
+"adminRegionsCompleted": "Завершённые заказы",
+"adminRegionsOrders": "Заказы",
+"adminRegionsSenders": "Отправители",
+"adminRegionsCouriers": "Курьеры",
+"adminRegionsComplaints": "Жалобы (пользователь)",
+"adminRegionsSelectRegion": "Детали региона",
+"adminHeaderSettings": "Настройки",
+"adminMetaFrom": "От",
+"adminMetaTo": "Кому"
+}
+

@@ -1,0 +1,726 @@
+{
+  "@@locale": "en",
+  "appTitle": "Courier Auction",
+  "splashTagline": "Fast. Modern. Smooth delivery.",
+  "getStarted": "Get started",
+  "language": "Language",
+  "languageUzbek": "Uzbek",
+  "languageRussian": "Russian",
+  "languageEnglish": "English",
+  "back": "Back",
+  "continueWord": "Continue",
+  "save": "Save",
+  "retry": "Retry",
+  "loading": "Loading…",
+  "errorGeneric": "Something went wrong",
+  "phoneLoginTitle": "Your phone number",
+  "phoneHint": "+998 __ ___ __ __",
+  "sendCode": "Send code",
+  "errorInvalidPhone": "Enter a valid phone number",
+  "smsTitle": "SMS verification",
+  "smsSubtitle": "Enter the code we sent you",
+  "verify": "Verify",
+  "resendCode": "Resend code",
+  "errorInvalidCode": "Invalid or expired code",
+  "offerTitle": "Public offer",
+  "offerWelcome": "Welcome",
+  "offerBody": "This agreement covers service terms, payments, liability, and data handling. You cannot continue registration without accepting the offer.",
+  "offerAcceptCheckbox": "I accept the offer terms",
+  "acceptAndContinue": "Accept and continue",
+  "errorMustAcceptOffer": "Accept the offer to continue",
+  "chooseRoleTitle": "Choose your role",
+  "roleSender": "Sender",
+  "roleSenderDesc": "Create jobs and pick a courier",
+  "roleCourier": "Courier",
+  "roleCourierDesc": "Join auctions",
+  "roleAdmin": "Administrator",
+  "roleAdminDesc": "Manage the platform",
+  "confirmRole": "Confirm",
+  "senderHomeTitle": "Home",
+  "courierHomeTitle": "Courier hub",
+  "adminHomeTitle": "Admin",
+  "whereToHint": "Where to deliver?",
+  "createJob": "Create job",
+  "nearbyCouriers": "Nearby couriers",
+  "activeJobs": "Active jobs",
+  "demoJobCardTitle": "Demo job",
+  "contactsHiddenUntilAuction": "Contact details stay hidden until the auction ends",
+  "contactsVisibleAfterWinner": "After a winner is chosen, call and chat unlock",
+  "auctionStatusLive": "Live auction",
+  "auctionStatusEnded": "Auction ended",
+  "winnerSelected": "Winner selected",
+  "topBid": "Top bid",
+  "timeLeft": "Time left",
+  "secondsShort": "{count}s",
+  "placeBid": "Place bid",
+  "jobDescriptionLabel": "Description",
+  "jobTitleLabel": "Job title",
+  "translateDemoHint": "Type text — stored in 3 languages (demo translation)",
+  "previewForLocale": "Preview for current language",
+  "storedUz": "Original (Uzbek)",
+  "storedRu": "Stored Russian",
+  "storedEn": "Stored English",
+  "logout": "Log out",
+  "settings": "Settings",
+  "userDemoName": "User",
+  "selectWinner": "Select winner",
+  "signInRequired": "Please sign in",
+  "noOpenAuctions": "No open auctions right now",
+  "courierOrdersTabAuction": "List",
+  "courierOrdersSubtabList": "Orders",
+  "courierOrdersTabInProgress": "In progress",
+  "courierOrdersTabCompleted": "Completed",
+  "courierOrdersEmptyInProgress": "No active deliveries yet. After an auction ends, if you win, your jobs appear here.",
+  "courierOrdersEmptyCompleted": "No completed jobs yet.",
+  "adminDashboard": "Admin panel",
+  "adminStatistics": "Statistika",
+  "adminUsers": "Foydalanuvchilar",
+  "adminLiveMap": "Jonli xarita",
+
+  "adminSectionOverview": "Key metrics",
+  "adminSectionOrders": "Orders & auctions",
+  "adminSectionUsersSecurity": "Users & safety",
+  "adminSectionShortcuts": "Quick actions",
+  "adminChartOrderStatus": "Order mix",
+  "adminNavStatsSubtitle": "Regional breakdown",
+  "adminNavUsersSubtitle": "Roles & blocking",
+  "adminNavMapSubtitle": "Live courier positions",
+  "adminMapMarkerCount": "{count} courier points",
+  "@adminMapMarkerCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminMapEmptyNoJobsTitle": "No live tracking",
+  "adminMapEmptyNoJobsBody": "There are no active tracking jobs right now. Pull to refresh or try again shortly.",
+  "adminMapEmptyNoGpsTitle": "No positions yet",
+  "adminMapEmptyNoGpsBody": "Jobs exist, but courier GPS positions have not been received yet.",
+  "chartLegendCompleted": "Completed",
+  "chartLegendActive": "In progress",
+  "chartLegendCancelled": "Cancelled",
+
+  "statTotalUsers": "Jami foydalanuvchilar",
+  "statSenders": "Yuboruvchilar soni",
+  "statCouriers": "Kuryerlar soni",
+  "statActiveJobs": "Faol buyurtmalar",
+  "statLiveAuctions": "Faol auksionlar",
+  "statCompleted": "Bajarilgan buyurtmalar",
+  "statUncompletedJobs": "Bajarilmagan buyurtmalar",
+  "statCancelled": "Bekor qilingan",
+  "statBlocked": "Bloklangan foydalanuvchilar",
+  "statComplaints": "Shikoyatlar soni",
+
+  "noJobsFound": "Buyurtmalar topilmadi",
+
+  "regionLabel": "Viloyat",
+  "districtLabel": "Tuman/Shahar",
+
+  "tabList": "Ro‘yxat",
+  "tabMap": "Xarita",
+
+  "courierMapNoOrdersInDistrict": "No orders in this area",
+  "courierMapOpenDetail": "Details",
+  "courierMapCoordsShort": "{lat}, {lng}",
+  "@courierMapCoordsShort": {
+    "placeholders": {
+      "lat": { "type": "String" },
+      "lng": { "type": "String" }
+    }
+  },
+
+  "courierPanelBannerTitle": "COURIER PANEL",
+  "courierGreeting": "Hello, {name}!",
+  "@courierGreeting": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "courierNavHome": "Home",
+  "courierNavOrders": "Orders",
+  "courierNavMaps": "Maps",
+  "courierNavAccount": "My account",
+  "senderBottomNavSwitchRole": "Switch role",
+  "bottomNavWallet": "Account",
+  "courierCardCreated": "Created",
+  "courierStatusWaiting": "In progress",
+  "courierDeliveredBadge": "Delivered",
+  "courierCardIdLabel": "ID",
+
+  "jobDetails": "Buyurtma tafsilotlari",
+  "jobDetailProductInfoTitle": "Product information",
+  "jobDetailNoProductImage": "No product image uploaded",
+  "jobDetailVolumeShort": "Volume",
+  "pickupLocation": "Qayerdan olinadi",
+  "dropoffLocation": "Qayerga yetkaziladi",
+  "mapDualFlowCardTitle": "Set addresses on the map",
+  "mapPickerNextDropoff": "Next: delivery location",
+  "mapPickerConfirmBoth": "Confirm addresses",
+
+  "recipientNameLabel": "Qabul qiluvchi ismi",
+  "recipientPhoneLabel": "Qabul qiluvchi telefoni",
+  "recipientPhoneHelper": "+998 is fixed. Enter exactly 9 digits after it so the courier can call the recipient.",
+
+  "joinAuctionCta": "Auksionga qo‘shilish",
+  "acceptLowerPrice": "Narxni qabul qilish",
+
+  "statusAuction": "Auksion",
+  "statusCompleted": "Bajarildi",
+
+  "complaint": "Shikoyat",
+  "praise": "Maqtov",
+
+  "mapSearch": "Qidiruv",
+  "selectedLocation": "Tanlangan joy",
+  "recenterMap": "Markazga qaytarish",
+"blockUser": "Foydalanuvchini bloklash",
+"auctionCurrentOffer": "Joriy taklif",
+"auctionFloor": "Minimal narx",
+"timeLeftShort": "Qolgan vaqt",
+"auctionHistory": "Auksion tarixi",
+  "auctionLiveScreenTitle": "Live auction",
+  "auctionOngoingLabel": "Auction in progress",
+  "auctionWaitingStartLabel": "Waiting for the auction to start",
+  "auctionTimeLeftLine": "{time} left",
+  "@auctionTimeLeftLine": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "auctionCouriersParticipatingCount": "{count} couriers participating",
+  "@auctionCouriersParticipatingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "auctionOrderDetailsTitle": "Order details",
+  "auctionPickupMapLabel": "Pickup:",
+  "auctionDropoffMapLabel": "Drop-off:",
+  "auctionRouteDistance": "{km} km",
+  "@auctionRouteDistance": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "auctionSenderTrustTitle": "About the sender",
+  "auctionCourierRatingsTitle": "Courier ratings",
+  "auctionAgreePriceCta": "Accept price →",
+  "auctionWatchCta": "Watch",
+  "auctionParticipateOutlined": "Participate",
+  "auctionYouAreLeading": "You are leading",
+  "auctionReviewsCount": "{count} reviews",
+  "@auctionReviewsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "auctionStartPriceLabel": "Starting price",
+  "auctionHozirgiTaklif": "Current bid",
+  "auctionYourPriceLabel": "Your accepted price",
+  "auctionNextOfferLabel": "Next offer (Accept price)",
+  "auctionEndedYouWonBody": "Congratulations! The order is assigned to you. Continue from your orders list.",
+  "auctionEndedOtherWinnerBody": "The auction ended in another courier’s favor.",
+  "auctionEndedNoWinnerBody": "Time ran out. The order is open for auction again.",
+  "auctionEndedGenericBody": "The auction has ended.",
+
+"chooseRoleSubtitle": "Ilovadan qanday foydalanmoqchisiz?",
+
+"stepProduct": "Mahsulot",
+"stepAddresses": "Manzillar",
+"stepRecipient": "Qabul qiluvchi",
+"stepReview": "Tekshirish",
+
+"fragileItem": "Nozik mahsulot",
+"needsColdChain": "Cold storage",
+
+"completedJobsLabel": "Bajarilgan ishlar",
+
+"markPickedUp": "Qabul qildim",
+"markDelivered": "Yetkazib berdim",
+
+"orderContactSectionTitle": "Contact details",
+"orderWinnerOutcomeTitle": "Winner confirmed",
+"orderFinalPriceLabel": "Final price",
+"orderWinnerSelectedAtLabel": "Selected at",
+"orderAuctionStepsCountLabel": "Auction steps",
+"orderAddressesHiddenForNonWinner": "Addresses are visible only to the winning courier.",
+"courierRatingStarsLabel": "Rating: {value}",
+"@courierRatingStarsLabel": {
+  "placeholders": {
+    "value": {
+      "type": "String"
+    }
+  }
+},
+
+"deliveryNoteOptional": "Izoh (ixtiyoriy)",
+"submitFeedback": "Leave feedback",
+  "feedbackComplaintTitle": "Describe your complaint",
+  "feedbackComplaintHint": "Briefly explain what went wrong…",
+  "feedbackPraiseTitle": "Give praise",
+  "feedbackPraiseStarsHint": "Rate with 1–5 stars",
+  "feedbackPraiseEmojiHint": "Or pick a quick emoji:",
+  "feedbackSend": "Send",
+  "feedbackSentThanks": "Thanks — your feedback was saved",
+  "feedbackAlreadySubmitted": "You already left feedback for this order (one complaint or praise per order).",
+  "rateCourierCta": "Rate courier",
+  "rateSenderCta": "Rate sender",
+  "orderFeedbackSheetTitleCourier": "Rate the courier",
+  "orderFeedbackSheetTitleSender": "Rate the sender",
+  "orderFeedbackStarsLabel": "Rating (1–5 stars, required)",
+  "orderFeedbackTypeNeutral": "Rating only",
+  "orderFeedbackTypeComplaint": "Complaint",
+  "orderFeedbackTypePraise": "Praise",
+  "orderFeedbackCommentOptional": "Comment (optional)",
+  "orderFeedbackYourSummaryTitle": "Your feedback",
+  "orderFeedbackSummaryRating": "{stars} / 5",
+  "@orderFeedbackSummaryRating": {
+    "placeholders": {
+      "stars": { "type": "int" }
+    }
+  },
+  "orderFeedbackSummaryTypeRating": "Rating",
+  "orderFeedbackSummaryTypeComplaint": "Complaint",
+  "orderFeedbackSummaryTypePraise": "Praise",
+  "orderFeedbackSummaryCategory": "Category: {name}",
+  "@orderFeedbackSummaryCategory": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "fbCatComplaintLate": "Late delivery",
+  "fbCatComplaintRude": "Poor attitude",
+  "fbCatComplaintCareless": "Careless with the order",
+  "fbCatComplaintAddress": "Address issue",
+  "fbCatOther": "Other",
+  "fbCatPraiseFast": "Fast delivery",
+  "fbCatPraisePolite": "Polite",
+  "fbCatPraiseCareful": "Careful",
+  "fbCatPraiseReliable": "Clear and reliable",
+
+"catComplaintLate": "Kechikdi",
+"catComplaintDamaged": "Zarar yetdi",
+"catComplaintCommunication": "Yomon aloqa",
+
+"catPraiseFast": "Tez yetkazdi",
+"catPraisePolite": "Xushmuomala",
+"catPraiseCareful": "Ehtiyotkor",
+
+"feedbackCategory": "Kategoriya",
+
+"validationRequired": "Majburiy maydon",
+  "fieldOptionalHint": "Optional",
+
+"createOrderTitle": "Buyurtma yaratish",
+
+"createJobConfirmTitle": "Confirm order",
+"createJobSenderAddressLabel": "Sender address",
+"createJobReceiverAddressLabel": "Recipient address",
+"createJobDeliveryTimeSection": "Delivery time",
+"createJobPickupSlotLabel": "Pickup",
+"createJobDeliverySlotLabel": "Delivery",
+"createJobAboutPackage": "About the package",
+"createJobPackageTypeShort": "Type",
+"createJobPackageSizeShort": "Size",
+"createJobPackageWeightShort": "Weight",
+"createJobPackageDescShort": "Description",
+"createJobEstimatedPrice": "Estimated price",
+"createJobFinalPriceDisclaimer": "Final price is set during the auction",
+"createJobAuctionHint": "After you submit, couriers will bid in the auction",
+"createJobPlaceOrder": "Place order",
+
+"productNameLabel": "Mahsulot nomi",
+"productTypeLabel": "Mahsulot turi",
+
+"weightKg": "Weight (kg)",
+"volumeCategoryLabel": "Volume category",
+"orderCommentsLabel": "Additional notes",
+"orderCommentsHint": "Add any extra details about this order",
+"orderCommentsCharCounter": "{current}/{max}",
+"@orderCommentsCharCounter": {
+  "placeholders": {
+    "current": {"type": "int"},
+    "max": {"type": "int"}
+  }
+},
+"orderSuitableTransportTitle": "Suitable vehicle",
+"orderRequiredTransportTitle": "Vehicle type",
+"validationSelectSuitableTransport": "Select at least one vehicle (you can select several)",
+"validationSelectOneTransport": "Select one vehicle type for this order",
+"transportLabelPiyoda": "On foot",
+"transportLabelVelosiped": "Bicycle / scooter",
+"transportLabelMoto": "Motorcycle",
+"transportLabelAvto": "Car",
+"transportLabelTruck": "Large truck",
+"courierTransportEmptyTitle": "No vehicle type selected",
+"courierTransportEmptySubtitle": "Choose at least one vehicle type in your profile to see matching orders.",
+"courierTransportChooseAction": "Choose vehicles",
+"courierProfileTransportLabel": "Vehicle types",
+"courierProfileTransportChange": "Change",
+"courierTransportSheetTitleProfile": "Update your vehicle types",
+"courierTransportSheetTitleSetup": "Choose your vehicle types",
+"courierFilterAllDistricts": "All districts",
+"jobTransportMismatchMessage": "This order does not match your vehicle types.",
+"volumeCatVerySmall": "Very small",
+"volumeCatSmall": "Small",
+"volumeCatMedium": "Medium",
+"volumeCatLarge": "Large",
+"volumeCatVeryLarge": "Large+",
+"dimensionsMmLabel": "Dimensions (mm)",
+"dimensionsMmHint": "1000x500x200",
+"validationDimensionsFormat": "Format: three numbers, e.g. 1000x500x200",
+"validationDimensionsRequired": "Dimensions are required for this volume",
+
+"startingPrice": "Starting price",
+
+"paymentType": "To‘lov turi",
+"paymentCash": "Naqd",
+"paymentCard": "Karta",
+"paymentPrepaid": "Oldindan",
+
+"deliveryTimeTitle": "Yetkazish vaqti",
+"deliveryFast": "Tez",
+"deliveryRelaxed": "Bemalol",
+"deliveryCustom": "Vaqtni tanlash",
+
+"deliveryUntilHint": "e.g. until 21:00",
+
+"mapAddressCity": "City",
+"mapAddressDistrict": "District",
+"mapAddressRegion": "Region",
+
+"mapDistanceLabel": "Distance",
+"mapDistanceApproximate": "Approximate (straight line)",
+"mapPickupMarkerHint": "Pickup point",
+
+"jobRouteMapTitle": "Route map",
+"jobMapNoCoordinates": "No map coordinates for these addresses.",
+"jobMapMarkerA": "A",
+"jobMapMarkerB": "B",
+"jobMapOneCoordinateOnly": "Only one address has coordinates — distance is not shown.",
+
+"courierJobMapToPickupTitle": "Route to pickup (A)",
+"courierJobMapToDropoffTitle": "Route to delivery (B)",
+"courierJobMapGpsUnavailable": "Could not get your location. Use the My location button.",
+
+"jobDimensionsMm": "Dimensions (mm)",
+
+"productPhoto": "Product photo",
+"validationProductPhotoRequired": "Add a product photo",
+"takePhoto": "Rasmga olish",
+"chooseFile": "Fayldan tanlash",
+
+"searchJobsHint": "Buyurtmalarni qidirish",
+
+"profileSection": "Profile",
+"senderProfileNameLabel": "Name",
+"senderProfilePhoneLabel": "Phone",
+"senderProfileRoleLabel": "Role",
+"senderProfileLanguageLabel": "Language",
+"senderProfileStatusLabel": "Status",
+"senderProfileNameEmpty": "No name added",
+"senderProfilePhoneEmpty": "No phone number",
+"senderProfileStatusActive": "Active",
+"senderProfileStatusBlocked": "Blocked",
+"senderProfilePhoneVerified": "Phone verified",
+"senderProfilePhoneNotVerified": "Phone not verified",
+"senderProfileVerificationLabel": "Phone status",
+"senderWalletTitle": "Wallet",
+"senderWalletSubtitle": "Coming soon.",
+"senderProfileEditSection": "Edit details",
+"senderProfileFullNameLabel": "Full name",
+"senderProfileFullNameHint": "Enter your first and last name",
+"senderProfileSecondaryPhoneLabel": "Additional phone",
+"senderProfileSecondaryPhoneHint": "+998 __ ___ __ __",
+"senderProfileChangePhoto": "Change photo",
+"senderProfileRemovePhoto": "Remove photo",
+"senderProfileEditTooltip": "Edit",
+"senderProfileSave": "Save",
+"senderProfileSaving": "Saving…",
+"senderProfileSaveSuccess": "Profile updated",
+"senderProfileInvalidSecondaryPhone": "Enter a valid Uzbekistan phone number",
+"senderProfileSecondarySameAsPrimary": "Use a number different from your primary phone",
+"senderProfilePrimaryPhoneReadOnly": "Primary phone (account)",
+"openAdminPanel": "Admin panelga o‘tish",
+
+"statusPosted": "Yaratildi",
+  "senderOrderStatusPosted": "Pending",
+  "senderOrderPriceLabel": "Price",
+  "senderOrderMinStavkaSuffix": "(min. bid)",
+  "senderOrderContactsHint": "After a courier is chosen, contact details will appear",
+"statusAssigned": "Biriktirildi",
+"statusPickedUp": "Olib ketildi",
+"statusDelivered": "Yetkazildi",
+
+"senderNotificationsTooltip": "Notifications",
+"senderNotificationsEmpty": "No new notifications yet",
+"senderSnackbarAuctionStarted": "Auction started — see your order under In progress",
+"senderSnackbarAuctionEndedAssigned": "Auction ended — a courier was assigned",
+"senderSnackbarAuctionEndedReopened": "Auction ended — no winner; order is waiting again",
+"senderSnackbarAuctionEndedCancelled": "Auction ended — order was cancelled",
+  "senderNotifCourierNearPickup1Km": "Courier approaching pickup (~1 km)",
+  "senderNotifCourierNearDropoff5Km": "Courier approaching delivery (~5 km)",
+  "senderNotifCourierNearDropoff2Km": "Courier approaching delivery (~2 km)",
+"senderNotifAuctionStartedBody": "«{product}». Couriers are submitting offers for this order. Your order has been moved to the In progress section.",
+"@senderNotifAuctionStartedBody": {
+  "placeholders": {
+    "product": {"type": "String"}
+  }
+},
+"senderNotifAuctionEndedAssignedBody": "«{product}». The winning bid from courier «{courier}» is {amount}. Open Order details for full information.",
+"@senderNotifAuctionEndedAssignedBody": {
+  "placeholders": {
+    "product": {"type": "String"},
+    "courier": {"type": "String"},
+    "amount": {"type": "String"}
+  }
+},
+"senderNotifAuctionReopenedBody": "«{product}». Auction ended — no winner; the order is waiting again.",
+"@senderNotifAuctionReopenedBody": {
+  "placeholders": {
+    "product": {"type": "String"}
+  }
+},
+"senderNotifAuctionCancelledBody": "«{product}». Auction ended — the order was cancelled.",
+"@senderNotifAuctionCancelledBody": {
+  "placeholders": {
+    "product": {"type": "String"}
+  }
+},
+"senderNotifOpenJobDetails": "Order details",
+"senderNotifUnknownCourier": "Courier",
+"liveTrackingBadge": "Live tracking",
+"courierTrackingSendingLabel": "Live location is being shared",
+"courierTrackingLocationPermissionDenied": "Location permission is off or GPS is disabled. Allow location access in settings — required for live tracking.",
+"trackingLastUpdatedPrefix": "Last update:",
+"senderTrackingWaitingCourierLocation": "Courier location not shared yet. The map appears once the courier opens this order in the app and starts moving.",
+"senderTrackingNoCoordinatesForLeg": "No map coordinates for this route.",
+"senderTrackingTapToEnlarge": "Tap the map to enlarge",
+"senderTrackingFullscreenTitlePickup": "Courier — pickup",
+"senderTrackingFullscreenTitleDropoff": "Courier — delivery",
+"senderTrackingDistanceMeters": "{m} m",
+"@senderTrackingDistanceMeters": {
+  "placeholders": {
+    "m": {"type": "int"}
+  }
+},
+"senderTrackingDistanceKm": "{km} km",
+"@senderTrackingDistanceKm": {
+  "placeholders": {
+    "km": {"type": "String"}
+  }
+},
+"senderTrackingEtaApproxMinutes": "About {minutes} min",
+"@senderTrackingEtaApproxMinutes": {
+  "placeholders": {
+    "minutes": {"type": "int"}
+  }
+},
+"senderTrackingEtaHoursMinutes": "About {hours} h {minutes} min",
+"@senderTrackingEtaHoursMinutes": {
+  "placeholders": {
+    "hours": {"type": "int"},
+    "minutes": {"type": "int"}
+  }
+},
+"senderNotificationsSheetTitle": "Notifications",
+"senderNotificationsLoadError": "Could not load notifications",
+"senderNotificationsTapToRead": "Tap for details",
+"senderNotificationsTimeJustNow": "Just now",
+"senderNotificationsTimeMinutesAgo": "{count} min ago",
+"@senderNotificationsTimeMinutesAgo": {
+  "placeholders": {
+    "count": {
+      "type": "int"
+    }
+  }
+},
+"senderNotificationsTimeHoursAgo": "{count} h ago",
+"@senderNotificationsTimeHoursAgo": {
+  "placeholders": {
+    "count": {
+      "type": "int"
+    }
+  }
+},
+"createJobMenuMore": "Settings",
+"createJobMenuChangeTheme": "Change appearance",
+"createJobMenuContactUs": "Contact us",
+"createJobThemeTitle": "Choose appearance",
+"createJobThemeLight": "Light",
+"createJobThemeDark": "Dark",
+"createJobThemeSystem": "System default",
+"createJobContactTitle": "Contact us",
+"createJobContactPickType": "Choose request type",
+"createJobContactComplaint": "Complaint",
+"createJobContactPraise": "Praise",
+"createJobContactApplication": "Request",
+"createJobContactSuggestion": "Suggestion",
+"createJobContactMessageLabel": "Your message",
+"createJobContactMessageHint": "Enter your message",
+"createJobContactSubmit": "Send",
+"createJobContactSuccess": "Your message was sent",
+"createJobValidationContactType": "Select a request type",
+"createJobValidationContactMessage": "Enter your message",
+"createJobValidationMessageTooShort": "Message is too short (min 15 characters)",
+"adminContactRequests": "Support requests",
+"adminContactRequestsSubtitle": "User messages",
+"adminContactRequestDetail": "Request details",
+"supportRequestStatusNew": "New",
+"supportRequestStatusRead": "Read",
+"supportRequestStatusResolved": "Resolved",
+"supportRequestFullMessage": "Full message",
+"supportRequestMarkRead": "Mark as read",
+"supportRequestMarkResolved": "Mark resolved",
+"adminPanelSubtitle": "Courier management dashboard",
+"adminBottomNavDashboard": "Dashboard",
+"adminBottomNavUsers": "Users",
+"adminBottomNavOrders": "Orders",
+"adminBottomNavAuctions": "Auctions",
+"adminBottomNavReports": "Reports",
+"adminBottomNavFinance": "Finance",
+"adminPanelNavSettings": "Settings",
+"adminQuickActionsTitle": "Quick actions",
+"adminActionViewList": "View",
+"adminActionEditRole": "Edit role",
+"adminActionBan": "Ban",
+"adminActionUnblock": "Unblock",
+"adminActionVerify": "Verify",
+"adminFinanceSectionTitle": "Finance & transactions",
+"adminFinanceTotalRevenue": "Total revenue",
+"adminFinanceCommissions": "Commissions earned",
+"adminFinanceSuccessfulPayments": "Successful payments",
+"adminFinanceCourierPayouts": "Courier payouts",
+"adminFinanceDemoHint": "Sample figures",
+"adminReportsSectionTitle": "Reports & complaints",
+"adminOrderFilterAll": "All",
+"adminOrderFilterPending": "Pending",
+"adminOrderFilterAuction": "Auction",
+"adminOrderFilterInDelivery": "In delivery",
+"adminOrderFilterCompleted": "Completed",
+"adminUserFilterAll": "All",
+"adminUserFilterSenders": "Senders",
+"adminUserFilterCouriers": "Couriers",
+"adminUserFilterBlocked": "Blocked",
+"adminUserFilterNew": "New",
+"adminUserFilterComplaints": "Complaints",
+"adminUserFilterAdmins": "Admins",
+"adminSettingsSectionShortcuts": "System & navigation",
+"adminOpenStatistics": "Open statistics",
+"adminOpenMap": "Live map",
+"adminOpenContactRequests": "Open support requests",
+"adminOpenFullSettings": "App settings",
+"adminComingSoonNotifications": "Notifications coming soon",
+"adminSearchHint": "Search",
+"adminLanguageTileTitle": "App language",
+"adminOrdersSectionTitle": "Orders",
+"adminAuctionsSectionTitle": "Auctions",
+"adminNoJobsInList": "No items",
+"adminRegionPerformanceTitle": "Regional performance",
+"adminRegionPerformanceHint": "Sample grid — live data later",
+"adminAnalyticsSectionTitle": "Analytics & charts",
+"adminChartDeliveryGrowth": "Delivery activity",
+"adminChartUsersVsCourier": "Users vs couriers",
+"adminChartCompletionDonut": "Completed orders share",
+"adminDesignSampleChartNote": "Charts scaled to your stats (sample curve)",
+"adminStatusActive": "Active",
+"adminStatusBlockedShort": "Blocked",
+"adminUserManagementTitle": "User management",
+"adminJobOrderNumber": "# {id}",
+"@adminJobOrderNumber": {
+  "placeholders": {
+    "id": {"type": "String"}
+  }
+},
+"adminPickupInfo": "Pickup",
+"adminDropoffInfo": "Drop-off",
+"adminReportSenderCourierComplaints": "Sender / courier complaints",
+"adminReportFlaggedOrders": "Flagged orders",
+"adminReportUrgentHighlights": "Urgent highlights",
+"adminActionQuickResolve": "Quick resolve",
+"adminActionReject": "Reject",
+"adminActionInvestigate": "Investigate",
+"adminFinancePendingPayouts": "Pending payouts",
+"adminDistrictActivityTitle": "District activity",
+"adminOrderHotspotsTitle": "Order hotspots",
+"adminCourierAvailabilityTitle": "Courier load (sample)",
+"adminGridAddAdmin": "Add admin",
+"adminGridManageRoles": "Manage roles",
+"adminGridViewReports": "Reports",
+"adminGridBlockUser": "Block user",
+"adminGridApproveCourier": "Approve courier",
+"adminGridMonitorAuctions": "Auctions",
+"adminGridSystemSettings": "System settings",
+"adminBottomNavFeedback": "Feedback",
+"adminBottomNavRegions": "Regions",
+"adminControlOverviewTitle": "Operations overview",
+"adminControlFeedbackTitle": "Feedback & quality",
+"adminControlGeoTitle": "Geography",
+"adminControlAuctionTitle": "Auctions & delivery",
+"adminControlUsersTotal": "Total users",
+"adminControlSenders": "Senders",
+"adminControlCouriers": "Couriers",
+"adminControlOrdersTotal": "Total orders",
+"adminControlPosted": "Posted",
+"adminControlAuctionLive": "Auction live",
+"adminControlAssigned": "Assigned",
+"adminControlPickedUp": "Picked up",
+"adminControlDelivered": "Delivered",
+"adminControlCompleted": "Completed",
+"adminControlCancelled": "Cancelled",
+"adminControlBlocked": "Blocked users",
+"adminControlRatingsTotal": "Total ratings",
+"adminControlAvgRating": "Average rating",
+"adminControlComplaintsNew": "Complaints (order_feedback)",
+"adminControlPraises": "Praises",
+"adminControlLegacyComplaints": "Legacy complaints",
+"adminControlTopComplaintTargets": "Most complained (to user)",
+"adminControlTopCouriersRating": "Top couriers by profile rating",
+"adminControlUsersByRegion": "Users by region",
+"adminControlJobsByRegion": "Orders by region",
+"adminControlDistrictsHint": "Districts (users, top)",
+"adminControlAuctionsTouched": "Auctions touched",
+"adminControlAvgBids": "Avg bid count",
+"adminControlAvgDiscount": "Avg price drop (currency units)",
+"adminControlCompletedDeliveries": "Completed deliveries",
+"adminControlActiveTracking": "Active delivery tracking",
+"adminOrderFilterComplaint": "Complaint",
+"adminOrderFilterAuctionBids": "Had bids",
+"adminOrderFilterRecent30": "Last 30 days",
+"adminUserFilterLowRating": "Low rating",
+"adminUserRegionAll": "All regions",
+"adminUserRegionFilterHint": "Region filter",
+"adminFeedbackSectionTitle": "Feedback & complaints",
+"adminFeedbackTabComplaints": "Complaints",
+"adminFeedbackTabAll": "All",
+"adminFeedbackLowRating": "Low rating (≤2)",
+"adminFeedbackSenderToCourier": "Sender → courier",
+"adminComplaintReview": "Review",
+"adminComplaintStatusLabel": "Status",
+"adminComplaintNoteLabel": "Admin note",
+"adminComplaintSave": "Save",
+"adminComplaintStatusNew": "New",
+"adminComplaintStatusReviewed": "Reviewed",
+"adminComplaintStatusResolved": "Resolved",
+"adminRegionsSectionTitle": "Regional analytics",
+"adminRegionsCompleted": "Completed orders",
+"adminRegionsOrders": "Orders",
+"adminRegionsSenders": "Senders",
+"adminRegionsCouriers": "Couriers",
+"adminRegionsComplaints": "Complaints (user)",
+"adminRegionsSelectRegion": "Region detail",
+"adminHeaderSettings": "Settings",
+"adminMetaFrom": "From",
+"adminMetaTo": "To"
+}
