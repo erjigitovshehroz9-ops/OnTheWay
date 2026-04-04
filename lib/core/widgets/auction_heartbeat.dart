@@ -1,12 +1,13 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../features/courier/application/courier_orders_supabase_sync.dart';
 import '../providers/core_providers.dart';
 
-/// Runs auction deadline processing every second (SQLite), no UI.
+/// Runs auction deadline processing every second (native SQLite + RPC). Web: RPC only, no timer.
 class AuctionHeartbeat extends ConsumerStatefulWidget {
   const AuctionHeartbeat({super.key, required this.child});
 
@@ -22,6 +23,9 @@ class _AuctionHeartbeatState extends ConsumerState<AuctionHeartbeat> {
   @override
   void initState() {
     super.initState();
+    if (kIsWeb) {
+      return;
+    }
     _timer = Timer.periodic(const Duration(seconds: 1), (_) async {
       try {
         final repo = await ref.read(jobRepositoryProvider.future);

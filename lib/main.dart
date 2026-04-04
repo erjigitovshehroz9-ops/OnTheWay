@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -19,7 +20,9 @@ Future<void> main() async {
   StackTrace? bootstrapStack;
 
   try {
-    await configureSqliteForPlatform();
+    if (!kIsWeb) {
+      await configureSqliteForPlatform();
+    }
 
     await Supabase.initialize(
       url: kSupabaseUrl,

@@ -4,7 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:uuid/uuid.dart';
 
-import '../core/database/app_database.dart';
+import '../core/web/job_local_persistence.dart';
 import '../core/geo/work_area_keys.dart';
 import '../core/utils/auction_math.dart';
 import '../core/utils/location_normalizer.dart';
@@ -628,18 +628,18 @@ class CreateJobInput {
 
 class JobRepository {
   JobRepository({
-    required AppDatabase database,
+    required JobLocalPersistence localPersistence,
     required TranslationService translationService,
     required UserRepository userRepository,
     required AuthRepository authRepository,
     SupabaseOrderService? supabaseOrderService,
-  })  : _db = database,
+  })  : _local = localPersistence,
         _translation = translationService,
         _users = userRepository,
         _auth = authRepository,
         _remoteOrders = supabaseOrderService;
 
-  final AppDatabase _db;
+  final JobLocalPersistence _local;
   final TranslationService _translation;
   final UserRepository _users;
   final AuthRepository _auth;
@@ -696,10 +696,10 @@ class JobRepository {
       }
     }
 
-    final assignedIds = await _db.processExpiredAuctions();
+    final assignedIds = await _local.processExpiredAuctions();
     if (remote == null || assignedIds.isEmpty) return;
     for (final id in assignedIds) {
-      final job = await _db.getJobById(id);
+      final job = await _local.getJobById(id);
       if (job == null) continue;
       logAuctionSourceTruth(
         source: 'local_sqlite_after_expired_tick',
@@ -785,7 +785,7 @@ class JobRepository {
     }
 
     if (bidId.isNotEmpty) {
-      await _db.insertAuctionStepIfAbsent(
+      await _local.insertAuctionStepIfAbsent(
         id: bidId,
         jobId: job.id,
         courierId: courierId,
@@ -808,7 +808,7 @@ class JobRepository {
       floorPriceCents: floor,
       currentPriceCents: priceAfter,
     );
-    await _db.updateJob(next);
+    await _local.updateJob(next);
     logAuctionSourceTruth(
       source: 'rpc_persisted_sqlite',
       orderId: job.id,
@@ -1002,7 +1002,7 @@ class JobRepository {
       status: JobStatus.posted,
       createdAt: DateTime.now(),
     );
-    await _db.insertJob(job);
+    await _local.insertJob(job);
     debugPrint('[job] created posted job ${job.id}');
     if (kDebugMode) {
       debugPrint(
@@ -1028,9 +1028,9 @@ class JobRepository {
           debugPrint('[order-create] remote insert ok id=${job.id}');
         }
         out = job.copyWith(syncedFromSupabase: true);
-        await _db.updateJob(out);
+        await _local.updateJob(out);
       } catch (e, st) {
-        await _db.deleteJobById(job.id);
+        await _local.deleteJobById(job.id);
         if (kDebugMode) {
           debugPrint(
             '[order-create] remote insert failed id=${job.id} error=$e',
@@ -1114,7 +1114,7 @@ class JobRepository {
       return;
     }
 
-    final existing = await _db.getJobById(dto.id);
+    final existing = await _local.getJobById(dto.id);
     final remoteStatus = dto.statusAsJobStatus;
 
     if (kDebugMode) {
@@ -1208,7 +1208,7 @@ class JobRepository {
     }
 
     if (existing == null) {
-      await _db.insertJob(incoming);
+      await _local.insertJob(incoming);
       if (kDebugMode) {
         debugPrint('[order-sync] local cache upsert id=${dto.id}');
         debugPrint(
@@ -1230,7 +1230,7 @@ class JobRepository {
             incoming.auctionStep,
             existing.floorPriceCents,
           );
-      await _db.updateJob(
+      await _local.updateJob(
         existing.copyWith(
           syncedFromSupabase: true,
           status: JobStatus.assigned,
@@ -1275,7 +1275,7 @@ class JobRepository {
           'ends=${bundle.auctionEndsAt} leader=${bundle.leadingCourierId}',
         );
       }
-      await _db.updateJob(
+      await _local.updateJob(
         existing.copyWith(
           syncedFromSupabase: true,
           status: JobStatus.auctionLive,
@@ -1287,7 +1287,7 @@ class JobRepository {
           winnerCourierId: incoming.winnerCourierId ?? existing.winnerCourierId,
         ),
       );
-      final merged = await _db.getJobById(dto.id);
+      final merged = await _local.getJobById(dto.id);
       if (merged != null) {
         logAuctionSourceTruth(
           source: 'remote_upsert_sqlite',
@@ -1357,7 +1357,7 @@ class JobRepository {
       final rR = _deliveryLifecycleRank(incoming.status);
       final rL = _deliveryLifecycleRank(existing.status);
       if (rR > rL) {
-        await _db.updateJob(
+        await _local.updateJob(
           existing.copyWith(
             syncedFromSupabase: true,
             status: incoming.status,
@@ -1388,7 +1388,7 @@ class JobRepository {
         return;
       }
       if (rR == rL) {
-        await _db.updateJob(
+        await _local.updateJob(
           existing.copyWith(
             syncedFromSupabase: true,
             courierLat: incoming.courierLat ?? existing.courierLat,
@@ -1432,7 +1432,7 @@ class JobRepository {
       courierCompletionNote: existing.courierCompletionNote,
     );
     postedMerged = _mergeCourierSnapshotOnto(postedMerged, incoming);
-    await _db.updateJob(postedMerged);
+    await _local.updateJob(postedMerged);
     if (kDebugMode) {
       debugPrint(
         '[remote-order] merge applied id=${dto.id} fieldsUpdated=$mergeFields',
@@ -1461,7 +1461,7 @@ class JobRepository {
         'after=$priceCents courier=$courierId',
       );
     }
-    await _db.insertAuctionStepIfAbsent(
+    await _local.insertAuctionStepIfAbsent(
       id: id,
       jobId: orderId,
       courierId: courierId,
@@ -1475,7 +1475,7 @@ class JobRepository {
     required String jobId,
     required String courierId,
   }) async {
-    final job = await _db.getJobById(jobId);
+    final job = await _local.getJobById(jobId);
     if (job == null) throw StateError('job_not_found');
     await _assertCourierJobTransportMatch(job: job, courierId: courierId);
     final remote = _remoteOrders;
@@ -1517,7 +1517,7 @@ class JobRepository {
     );
     final bidId = _uuid.v4();
     final createdAt = DateTime.now();
-    await _db.insertAuctionStepIfAbsent(
+    await _local.insertAuctionStepIfAbsent(
       id: bidId,
       jobId: jobId,
       courierId: courierId,
@@ -1533,7 +1533,7 @@ class JobRepository {
       auctionEndsAt: ends,
       currentPriceCents: committed,
     );
-    await _db.updateJob(next);
+    await _local.updateJob(next);
     logAuctionSourceTruth(
       source: 'optimistic_local_sqlite_no_remote',
       orderId: jobId,
@@ -1551,7 +1551,7 @@ class JobRepository {
     required String jobId,
     required String courierId,
   }) async {
-    final job = await _db.getJobById(jobId);
+    final job = await _local.getJobById(jobId);
     if (job == null) throw StateError('job_not_found');
     await _assertCourierJobTransportMatch(job: job, courierId: courierId);
     if (job.status != JobStatus.auctionLive) {
@@ -1611,7 +1611,7 @@ class JobRepository {
     final bidId = _uuid.v4();
     final createdAt = DateTime.now();
     final ends = DateTime.now().add(const Duration(seconds: 30));
-    await _db.insertAuctionStepIfAbsent(
+    await _local.insertAuctionStepIfAbsent(
       id: bidId,
       jobId: jobId,
       courierId: courierId,
@@ -1626,7 +1626,7 @@ class JobRepository {
       auctionEndsAt: ends,
       currentPriceCents: price,
     );
-    await _db.updateJob(next);
+    await _local.updateJob(next);
     logAuctionSourceTruth(
       source: 'optimistic_local_sqlite_no_remote',
       orderId: jobId,
@@ -1644,7 +1644,7 @@ class JobRepository {
     required String jobId,
     required String courierId,
   }) async {
-    final job = await _db.getJobById(jobId);
+    final job = await _local.getJobById(jobId);
     if (job == null) throw StateError('job_not_found');
     if (job.winnerCourierId != courierId) {
       throw StateError('not_winner');
@@ -1653,7 +1653,7 @@ class JobRepository {
       throw StateError('wrong_status');
     }
     final next = job.copyWith(status: JobStatus.pickedUp);
-    await _db.updateJob(next);
+    await _local.updateJob(next);
     final remote = _remoteOrders;
     if (remote != null && job.syncedFromSupabase) {
       try {
@@ -1681,7 +1681,7 @@ class JobRepository {
     double? speedMps,
     double? accuracyM,
   }) async {
-    final job = await _db.getJobById(jobId);
+    final job = await _local.getJobById(jobId);
     if (job == null) throw StateError('job_not_found');
     if (job.winnerCourierId?.trim() != reportingCourierId.trim()) {
       if (kDebugMode) {
@@ -1747,7 +1747,7 @@ class JobRepository {
       courierAccuracyM: accuracyM ?? job.courierAccuracyM,
     );
     next = await _applyProximityMilestones(next);
-    await _db.updateJob(next);
+    await _local.updateJob(next);
     return next;
   }
 
@@ -1909,7 +1909,7 @@ class JobRepository {
     required String courierId,
     String? note,
   }) async {
-    final job = await _db.getJobById(jobId);
+    final job = await _local.getJobById(jobId);
     if (job == null) throw StateError('job_not_found');
     if (job.winnerCourierId != courierId) {
       throw StateError('not_winner');
@@ -1921,7 +1921,7 @@ class JobRepository {
       status: JobStatus.delivered,
       courierCompletionNote: note,
     );
-    await _db.updateJob(next);
+    await _local.updateJob(next);
     final remote = _remoteOrders;
     if (remote != null && job.syncedFromSupabase) {
       try {
@@ -1947,14 +1947,14 @@ class JobRepository {
     required String jobId,
     required String senderId,
   }) async {
-    final job = await _db.getJobById(jobId);
+    final job = await _local.getJobById(jobId);
     if (job == null) throw StateError('job_not_found');
     if (job.senderId != senderId) throw StateError('not_sender');
     if (job.status != JobStatus.delivered) {
       throw StateError('wrong_status');
     }
     final next = job.copyWith(status: JobStatus.completed);
-    await _db.updateJob(next);
+    await _local.updateJob(next);
     final remote = _remoteOrders;
     if (remote != null && job.syncedFromSupabase) {
       try {
@@ -1978,7 +1978,7 @@ class JobRepository {
   }
 
   Future<List<JobEntity>> senderJobs(String senderId) {
-    return _db.listJobsForSender(senderId);
+    return _local.listJobsForSender(senderId);
   }
 
   /// [courierTransportKeys]: `null` yoki bo‘sh — transport bo‘yicha filtrlash yo‘q.
@@ -1995,7 +1995,7 @@ class JobRepository {
     String? winnerCourierId,
     bool requireRemoteBackedJobs = false,
   }) {
-    return _db.listJobsForCourierFeed(
+    return _local.listJobsForCourierFeed(
       regionCode: regionCode,
       districtCode: districtCode,
       courierWorkingRegionKey: courierWorkingRegionKey,
@@ -2007,7 +2007,7 @@ class JobRepository {
     );
   }
 
-  Future<JobEntity?> getJob(String id) => _db.getJobById(id);
+  Future<JobEntity?> getJob(String id) => _local.getJobById(id);
 
   List<JobEntity> filterJobs(
     List<JobEntity> jobs,
@@ -2035,10 +2035,10 @@ class JobRepository {
     required String courierId,
     required double amount,
   }) async {
-    final job = await _db.getJobById(jobId);
+    final job = await _local.getJobById(jobId);
     if (job == null) throw StateError('job_not_found');
     await _assertCourierJobTransportMatch(job: job, courierId: courierId);
-    await _db.insertBid(
+    await _local.insertBid(
       BidEntity(
         id: _uuid.v4(),
         jobId: jobId,
@@ -2050,10 +2050,10 @@ class JobRepository {
   }
 
   Future<List<BidEntity>> bidsForJob(String jobId) {
-    return _db.listBidsForJob(jobId);
+    return _local.listBidsForJob(jobId);
   }
 
   Future<List<Map<String, Object?>>> auctionHistory(String jobId) {
-    return _db.listAuctionSteps(jobId);
+    return _local.listAuctionSteps(jobId);
   }
 }

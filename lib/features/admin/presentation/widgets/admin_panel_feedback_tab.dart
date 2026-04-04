@@ -348,6 +348,7 @@ Future<void> _openModeration(
   if (result == null || !context.mounted) return;
 
   final db = await ref.read(appDatabaseProvider.future);
+  if (db == null) return;
   await db.updateOrderFeedbackModeration(
     feedbackId: f.id,
     complaintStatus: result.$1,

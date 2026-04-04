@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'dart:io';
 
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:http/http.dart' as http;
 
 import 'network_config.dart';
@@ -15,7 +15,14 @@ class StartupReachabilityFailure implements Exception {
 }
 
 /// Internet va (sozlangan bo'lsa) ilova serveri mavjudligini tekshiradi.
+///
+/// Web: brauzer tarmog'iga ishonamiz; tashqi `generate_204` / CORS tekshiruvlari yo'q.
+/// Supabase yuklanmasa foydalanuvchi keyinroq xato ko'radi.
 Future<void> verifyStartupReachability() async {
+  if (kIsWeb) {
+    return;
+  }
+
   await _pingHttp(
     Uri.parse('https://www.gstatic.com/generate_204'),
     onFailure: () => StartupReachabilityFailure(
@@ -52,19 +59,17 @@ Future<void> _pingHttp(
     throw onFailure();
   } on StartupReachabilityFailure {
     rethrow;
-  } on SocketException {
-    throw onFailure();
   } on TimeoutException {
     throw StartupReachabilityFailure(
       "Tarmoq yoki server javob bermadi. Keyinroq qayta urinib ko'ring.",
     );
-  } on HandshakeException {
-    throw StartupReachabilityFailure(
-      "Xavfsiz ulanish o'rnatilmadi. Vaqt yoki tarmoq sozlamalarini tekshiring.",
-    );
-  } on http.ClientException {
-    throw onFailure();
-  } catch (_) {
+  } catch (e) {
+    final s = e.toString();
+    if (s.contains('HandshakeException')) {
+      throw StartupReachabilityFailure(
+        "Xavfsiz ulanish o'rnatilmadi. Vaqt yoki tarmoq sozlamalarini tekshiring.",
+      );
+    }
     throw onFailure();
   } finally {
     client.close();

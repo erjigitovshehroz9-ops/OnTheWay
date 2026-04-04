@@ -1,8 +1,9 @@
-import 'dart:io';
-
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/theme/app_theme_tokens.dart';
+import '../../core/utils/local_file_exists.dart';
+import 'platform_file_image.dart';
 
 /// Yuboruvchi/kuryer menyusi: metallik ramka + profil rasmi yoki monogram + pastki status nuqta.
 class PremiumMonogramAvatar extends StatelessWidget {
@@ -62,12 +63,12 @@ class PremiumMonogramAvatar extends StatelessWidget {
     }
 
     final path = profileImagePath?.trim();
-    File? photoFile;
-    if (path != null && path.isNotEmpty) {
-      final f = File(path);
-      if (f.existsSync()) photoFile = f;
-    }
-    final showPhoto = photoFile != null;
+    final showPhoto = path != null &&
+        path.isNotEmpty &&
+        (kIsWeb
+            ? (path.toLowerCase().startsWith('http://') ||
+                path.toLowerCase().startsWith('https://'))
+            : localFileExistsSync(path));
 
     final Widget innerChild;
     if (showPhoto) {
@@ -79,12 +80,11 @@ class PremiumMonogramAvatar extends StatelessWidget {
           border: innerBorder,
         ),
         clipBehavior: Clip.antiAlias,
-        child: Image.file(
-          photoFile!,
+        child: platformFileImage(
+          path,
           fit: BoxFit.cover,
           width: innerSize,
           height: innerSize,
-          errorBuilder: (_, __, ___) => Center(child: monogramOrPerson()),
         ),
       );
     } else {

@@ -63,4 +63,35 @@ class AdminOperationalSnapshot {
   final List<({String code, int count})> jobsByDistrict;
 
   int get complaintsCombined => orderFeedbackComplaints + legacyComplaints;
+
+  /// Flutter web: no local SQLite aggregates.
+  static AdminOperationalSnapshot emptyWeb() => const AdminOperationalSnapshot(
+        usersTotal: 0,
+        senders: 0,
+        couriers: 0,
+        jobsTotal: 0,
+        jobsPosted: 0,
+        jobsAuctionLive: 0,
+        jobsAssigned: 0,
+        jobsPickedUp: 0,
+        jobsDelivered: 0,
+        jobsCompleted: 0,
+        jobsCancelled: 0,
+        blockedUsers: 0,
+        orderFeedbackTotal: 0,
+        orderFeedbackAvgRating: 0,
+        orderFeedbackComplaints: 0,
+        orderFeedbackPraises: 0,
+        legacyComplaints: 0,
+        auctionsTouchedCount: 0,
+        avgAuctionBidCount: 0,
+        avgFinalDiscountCents: 0,
+        activeDeliveryTrackingCount: 0,
+        topComplaintUserIds: [],
+        topCourierRatings: [],
+        usersByRegion: [],
+        jobsByRegion: [],
+        usersByDistrict: [],
+        jobsByDistrict: [],
+      );
 }

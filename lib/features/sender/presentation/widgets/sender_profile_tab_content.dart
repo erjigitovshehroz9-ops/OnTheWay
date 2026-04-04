@@ -1,11 +1,12 @@
-import 'dart:io';
-
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../core/providers/core_providers.dart';
+import '../../../../core/utils/local_file_exists.dart';
+import '../../../../shared/widgets/platform_file_image.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/utils/phone_validator.dart';
 import '../../../../l10n/generated/app_localizations.dart';
@@ -116,7 +117,12 @@ class _SenderProfileTabContentState extends ConsumerState<SenderProfileTabConten
   }
 
   bool _hasDisplayableImage(String path) {
-    return path.isNotEmpty && File(path).existsSync();
+    if (path.isEmpty) return false;
+    if (kIsWeb) {
+      final t = path.trim().toLowerCase();
+      return t.startsWith('http://') || t.startsWith('https://');
+    }
+    return localFileExistsSync(path);
   }
 
   void _showSnack(String message) {
@@ -423,13 +429,11 @@ class _SenderProfileTabContentState extends ConsumerState<SenderProfileTabConten
           ),
           child: ClipOval(
             child: showImage
-                ? Image.file(
-                    File(path),
+                ? platformFileImage(
+                    path,
                     width: _avatarOuter,
                     height: _avatarOuter,
                     fit: BoxFit.cover,
-                    gaplessPlayback: true,
-                    errorBuilder: (_, __, ___) => _avatarPlaceholder(),
                   )
                 : _avatarPlaceholder(),
           ),

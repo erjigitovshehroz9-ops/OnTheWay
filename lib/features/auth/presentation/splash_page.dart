@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -31,6 +32,10 @@ class SplashPage extends ConsumerWidget {
       onRetry = () {
         ref.invalidate(authSessionProvider);
         ref.invalidate(appDatabaseProvider);
+        if (kIsWeb) {
+          ref.invalidate(userBackingStoreProvider);
+          ref.invalidate(jobLocalPersistenceProvider);
+        }
         ref.invalidate(sharedPreferencesProvider);
       };
     } else {

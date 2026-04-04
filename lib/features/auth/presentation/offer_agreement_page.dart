@@ -1,6 +1,5 @@
-import 'dart:io';
-
 import 'package:courier_auction/shared/widgets/courier_registration_transport_row.dart';
+import 'package:courier_auction/shared/widgets/platform_file_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -1110,8 +1109,8 @@ class _ProfileAvatarPicker extends StatelessWidget {
                 ),
                 child: ClipOval(
                   child: hasImage
-                      ? Image.file(
-                          File(imagePath!),
+                      ? platformFileImage(
+                          imagePath!,
                           fit: BoxFit.cover,
                         )
                       : const Icon(

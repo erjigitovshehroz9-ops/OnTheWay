@@ -1,8 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
-import 'package:path/path.dart' as p;
-import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 
 import '../../data/regions_seed.dart';
@@ -12,12 +10,12 @@ import '../../models/bid_entity.dart';
 import '../../models/delivery_speed.dart';
 import '../../models/feedback_entity.dart';
 import '../../models/feedback_kind.dart';
-import '../../models/order_feedback_entity.dart';
-import '../../models/order_feedback_type.dart';
 import '../../models/job_entity.dart';
 import '../../models/job_status.dart';
 import '../../models/job_transport_type.dart';
 import '../../models/localized_string.dart';
+import '../../models/order_feedback_entity.dart';
+import '../../models/order_feedback_type.dart';
 import '../../models/payment_type.dart';
 import '../../models/region_record.dart';
 import '../../models/support_request_entity.dart';
@@ -25,6 +23,7 @@ import '../../models/user_role.dart';
 import '../geo/pickup_admin_code_resolver.dart';
 import '../geo/work_area_keys.dart';
 import '../utils/auction_math.dart';
+import 'app_database_path.dart';
 
 List<JobEntity> _dedupeJobsByIdPreserveOrder(List<JobEntity> jobs) {
   final seen = <String>{};
@@ -43,9 +42,30 @@ class AppDatabase {
   static const _name = 'courier_auction.db';
   static const _version = 22;
 
+  static AppDatabase? _singleton;
+  static Future<AppDatabase>? _opening;
+
+  /// Single shared instance; [open] is safe to call from many providers/timers.
   static Future<AppDatabase> open() async {
-    final dir = await getApplicationDocumentsDirectory();
-    final path = p.join(dir.path, _name);
+    final existing = _singleton;
+    if (existing != null) return existing;
+    final pending = _opening;
+    if (pending != null) return pending;
+
+    _opening = _openNew();
+    try {
+      final db = await _opening!;
+      _singleton = db;
+      return db;
+    } finally {
+      _opening = null;
+    }
+  }
+
+  static Future<AppDatabase> _openNew() async {
+    // Web: absolute path so sqflite_common never joins [getDatabasesPath] (avoids
+    // path_provider). IO: [resolveAppDatabasePath] uses path_provider (not imported on web).
+    final path = await resolveAppDatabasePath(_name);
     if (kDebugMode) {
       print('DB PATH: $path');
     }

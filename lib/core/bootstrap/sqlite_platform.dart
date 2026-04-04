@@ -1,17 +1,9 @@
-import 'package:flutter/foundation.dart'
-    show defaultTargetPlatform, kIsWeb, TargetPlatform;
-import 'package:sqflite_common_ffi/sqflite_ffi.dart';
+import 'sqlite_platform_stub.dart'
+    if (dart.library.html) 'sqlite_platform_html.dart'
+    if (dart.library.io) 'sqlite_platform_io.dart' as sqlite_impl;
 
-/// Desktop (Windows, Linux, macOS) requires FFI. Mobile uses default sqflite.
+/// Desktop (Windows, Linux, macOS) uses FFI. Web uses wasm/IndexedDB factory.
+/// Mobile uses default sqflite.
 Future<void> configureSqliteForPlatform() async {
-  if (kIsWeb) return;
-  switch (defaultTargetPlatform) {
-    case TargetPlatform.windows:
-    case TargetPlatform.linux:
-    case TargetPlatform.macOS:
-      sqfliteFfiInit();
-      databaseFactory = databaseFactoryFfi;
-    default:
-      break;
-  }
+  await sqlite_impl.configureSqliteImpl();
 }

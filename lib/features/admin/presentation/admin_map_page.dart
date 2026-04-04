@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -16,7 +17,9 @@ import '../../../shared/widgets/app_primary_scaffold.dart';
 import 'widgets/admin_surface_card.dart';
 
 final _trackingJobsProvider = FutureProvider<List<JobEntity>>((ref) async {
+  if (kIsWeb) return [];
   final db = await ref.watch(appDatabaseProvider.future);
+  if (db == null) return [];
   return db.listActiveTrackingJobs();
 });
 

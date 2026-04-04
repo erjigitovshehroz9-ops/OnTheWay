@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/providers/core_providers.dart';
@@ -36,7 +37,37 @@ class AdminStats {
 }
 
 final adminStatsProvider = FutureProvider<AdminStats>((ref) async {
+  if (kIsWeb) {
+    return const AdminStats(
+      users: 0,
+      senders: 0,
+      couriers: 0,
+      jobs: 0,
+      activeJobs: 0,
+      liveAuctions: 0,
+      completedJobs: 0,
+      uncompletedJobs: 0,
+      cancelledJobs: 0,
+      blockedUsers: 0,
+      complaints: 0,
+    );
+  }
   final db = await ref.watch(appDatabaseProvider.future);
+  if (db == null) {
+    return const AdminStats(
+      users: 0,
+      senders: 0,
+      couriers: 0,
+      jobs: 0,
+      activeJobs: 0,
+      liveAuctions: 0,
+      completedJobs: 0,
+      uncompletedJobs: 0,
+      cancelledJobs: 0,
+      blockedUsers: 0,
+      complaints: 0,
+    );
+  }
   final users = await db.countUsers();
   final senders = await db.countSenders();
   final couriers = await db.countUsersByRole('courier');

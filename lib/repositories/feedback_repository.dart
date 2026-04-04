@@ -13,7 +13,7 @@ import 'user_repository.dart';
 
 class FeedbackRepository {
   FeedbackRepository({
-    required AppDatabase database,
+    AppDatabase? database,
     required UserRepository userRepository,
     this.supabaseOrderService,
   })  : _db = database,
@@ -25,7 +25,8 @@ class FeedbackRepository {
   /// `order_feedback` unique yoki server `duplicate`.
   static const duplicateOrderFeedbackCode = 'order_feedback_duplicate';
 
-  final AppDatabase _db;
+  /// Null on Flutter web (no SQLite); remote + [UserRepository] only.
+  final AppDatabase? _db;
   final UserRepository _users;
   final SupabaseOrderService? supabaseOrderService;
   final _uuid = const Uuid();
@@ -34,8 +35,20 @@ class FeedbackRepository {
   Future<bool> hasSubmittedForJob({
     required String fromUserId,
     required String jobId,
-  }) {
-    return _db.hasAnyFeedbackFromUserForOrder(
+  }) async {
+    final remote = supabaseOrderService;
+    if (remote != null) {
+      try {
+        final row = await remote.fetchMyOrderFeedbackRemote(
+          orderId: jobId,
+          fromUserId: fromUserId,
+        );
+        if (row != null) return true;
+      } catch (_) {}
+    }
+    final db = _db;
+    if (db == null) return false;
+    return db.hasAnyFeedbackFromUserForOrder(
       fromUserId: fromUserId,
       orderId: jobId,
     );
@@ -45,10 +58,13 @@ class FeedbackRepository {
     required String orderId,
     required String fromUserId,
   }) async {
-    final local = await _db.getOrderFeedbackByFromUser(
-      orderId: orderId,
-      fromUserId: fromUserId,
-    );
+    final db = _db;
+    final local = db == null
+        ? null
+        : await db.getOrderFeedbackByFromUser(
+            orderId: orderId,
+            fromUserId: fromUserId,
+          );
     final remote = supabaseOrderService;
     if (remote != null) {
       try {
@@ -57,7 +73,9 @@ class FeedbackRepository {
           fromUserId: fromUserId,
         );
         if (row != null) {
-          await _db.insertOrderFeedback(row);
+          if (db != null) {
+            await db.insertOrderFeedback(row);
+          }
           return row;
         }
       } catch (e, st) {
@@ -184,7 +202,10 @@ class FeedbackRepository {
       updatedAt: now,
       complaintStatus: feedbackType == OrderFeedbackType.complaint ? 'new' : null,
     );
-    await _db.insertOrderFeedback(entity);
+    final db = _db;
+    if (db != null) {
+      await db.insertOrderFeedback(entity);
+    }
     await _users.applyOrderFeedbackImpact(
       toUserId: toUserId,
       rating: rating,
@@ -220,7 +241,11 @@ class FeedbackRepository {
     if (await hasSubmittedForJob(fromUserId: fromUserId, jobId: jobId)) {
       throw StateError(FeedbackRepository.duplicateFeedbackCode);
     }
-    await _db.insertFeedback(
+    final db = _db;
+    if (db == null) {
+      throw StateError('legacy_feedback_unavailable_on_web');
+    }
+    await db.insertFeedback(
       FeedbackEntity(
         id: _uuid.v4(),
         fromUserId: fromUserId,

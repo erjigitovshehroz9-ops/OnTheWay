@@ -1,11 +1,17 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../database/app_database.dart';
+import '../web/job_local_persistence.dart';
+import '../web/sqlite_job_persistence.dart';
+import '../web/sqlite_user_backing_store.dart';
+import '../web/user_backing_store.dart';
+import '../web/web_job_memory_persistence.dart';
+import '../web/web_prefs_user_backing_store.dart';
 import '../../data/regions_seed.dart';
 import '../../l10n/generated/app_localizations.dart';
 import '../../models/app_user.dart';
@@ -27,9 +33,9 @@ import '../../services/theme/theme_preferences.dart';
 import '../../services/translation/mock_translation_service.dart';
 import '../../services/translation/translation_service.dart';
 import '../courier/courier_feed_selection.dart';
-import '../database/app_database.dart';
 import '../geo/work_area_keys.dart';
 import '../network/startup_reachability.dart';
+import '../utils/local_file_exists.dart';
 
 final sharedPreferencesProvider = FutureProvider<SharedPreferences>(
   (ref) => SharedPreferences.getInstance(),
@@ -41,7 +47,10 @@ final profileImagePathProvider =
   final sp = await ref.watch(sharedPreferencesProvider.future);
   final raw = sp.getString('profile_image_path_$userId')?.trim();
   if (raw == null || raw.isEmpty) return null;
-  if (!File(raw).existsSync()) return null;
+  if (kIsWeb) {
+    return null;
+  }
+  if (!localFileExistsSync(raw)) return null;
   return raw;
 });
 
@@ -56,8 +65,33 @@ final startupReachabilityProvider = FutureProvider<void>(
   },
 );
 
-final appDatabaseProvider = FutureProvider<AppDatabase>(
-  (ref) => AppDatabase.open(),
+/// SQLite is disabled on Flutter web; returns null there.
+final appDatabaseProvider = FutureProvider<AppDatabase?>((ref) async {
+  if (kIsWeb) return null;
+  return AppDatabase.open();
+});
+
+WebJobMemoryPersistence? _webJobMemorySingleton;
+
+/// User rows: SQLite (native) or SharedPreferences JSON (web).
+final userBackingStoreProvider = FutureProvider<UserBackingStore>((ref) async {
+  if (kIsWeb) {
+    final sp = await ref.watch(sharedPreferencesProvider.future);
+    return WebPrefsUserBackingStore(sp);
+  }
+  final db = await ref.watch(appDatabaseProvider.future);
+  return SqliteUserBackingStore(db!);
+});
+
+/// Job/bid cache: SQLite (native) or in-memory (web; hydrated from Supabase).
+final jobLocalPersistenceProvider = FutureProvider<JobLocalPersistence>(
+  (ref) async {
+    if (kIsWeb) {
+      return _webJobMemorySingleton ??= WebJobMemoryPersistence();
+    }
+    final db = await ref.watch(appDatabaseProvider.future);
+    return SqliteJobPersistence(db!);
+  },
 );
 
 final supabaseOrderServiceProvider = Provider<SupabaseOrderService>(
@@ -120,21 +154,21 @@ class ThemeModeController extends AsyncNotifier<ThemeMode> {
 
 final authRepositoryProvider = FutureProvider<AuthRepository>(
   (ref) async {
-    final db = await ref.watch(appDatabaseProvider.future);
+    final store = await ref.watch(userBackingStoreProvider.future);
     final sp = await ref.watch(sharedPreferencesProvider.future);
-    return AuthRepository(database: db, preferences: sp);
+    return AuthRepository(userStore: store, preferences: sp);
   },
 );
 
 final jobRepositoryProvider = FutureProvider<JobRepository>(
   (ref) async {
-    final db = await ref.watch(appDatabaseProvider.future);
+    final local = await ref.watch(jobLocalPersistenceProvider.future);
     final translation = ref.watch(translationServiceProvider);
     final users = await ref.watch(userRepositoryProvider.future);
     final auth = await ref.watch(authRepositoryProvider.future);
     final supabaseOrders = ref.watch(supabaseOrderServiceProvider);
     return JobRepository(
-      database: db,
+      localPersistence: local,
       translationService: translation,
       userRepository: users,
       authRepository: auth,
@@ -145,8 +179,8 @@ final jobRepositoryProvider = FutureProvider<JobRepository>(
 
 final userRepositoryProvider = FutureProvider<UserRepository>(
   (ref) async {
-    final db = await ref.watch(appDatabaseProvider.future);
-    return UserRepository(db);
+    final store = await ref.watch(userBackingStoreProvider.future);
+    return UserRepository(store);
   },
 );
 

@@ -94,7 +94,9 @@ class _RegionCard extends ConsumerWidget {
       error: (e, st) => AdminSurfaceCard(child: Text('$e')),
       data: (db) {
         return FutureBuilder<_Counts>(
-          future: _loadCounts(db, region.code),
+          future: db == null
+              ? Future.value(_emptyRegionCounts)
+              : _loadCounts(db, region.code),
           builder: (context, snap) {
             final c = snap.data;
             final scheme = Theme.of(context).colorScheme;
@@ -223,7 +225,7 @@ class _AdminRegionDistrictsList extends ConsumerWidget {
   });
 
   final String regionCode;
-  final AppDatabase db;
+  final AppDatabase? db;
   final Locale locale;
   final ColorScheme scheme;
 
@@ -243,7 +245,9 @@ class _AdminRegionDistrictsList extends ConsumerWidget {
         return Column(
           children: districts.map((d) {
             return FutureBuilder<int>(
-              future: db.countJobsInDistrict(d.code),
+              future: db == null
+                  ? Future.value(0)
+                  : db!.countJobsInDistrict(d.code),
               builder: (context, dsnap) {
                 final n = dsnap.data ?? 0;
                 return Padding(
@@ -292,6 +296,15 @@ class _AdminRegionDistrictsList extends ConsumerWidget {
     );
   }
 }
+
+final _emptyRegionCounts = _Counts(
+  totalJobs: 0,
+  active: 0,
+  live: 0,
+  completed: 0,
+  cancelled: 0,
+  complaints: 0,
+);
 
 Future<_Counts> _loadCounts(AppDatabase db, String regionCode) async {
   final jobs = await db.countJobsInRegion(regionCode);
